@@ -10,7 +10,7 @@
 }
 
 form .controls {
-    width: 65em;
+    width: 70em;
     height: 40px;
     display: flex;
     border-radius: 4px;
@@ -18,7 +18,7 @@ form .controls {
 
 form input {
     flex: 1;
-    max-width: 1000px;
+    max-width: 1200px;
     border: none;
     outline: none;
     padding-left: 10px;
