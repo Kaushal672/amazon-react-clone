@@ -1,0 +1,28 @@
+.btn {
+    outline: none;
+    border: 2px solid transparent;
+    width: 5rem;
+    height: 14.8rem;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 4px;
+    position: relative;
+    margin: 3px;
+}
+
+.btn:focus {
+    border: 2px solid #4895ef;
+    outline: 2px solid #f5f3f4;
+}
+
+.arrow-icon {
+    color: #6c757d;
+}
+
+.arrow-left {
+    left: 0px;
+}
+
+.arrow-right {
+    right: 0px;
+}
