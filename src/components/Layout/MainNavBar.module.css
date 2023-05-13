@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+header {
+    background-color: #131921;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-bar {
+    display: block;
+    margin: 18px 10px 10px 25px;
+    width: 30rem;
+    height: 2rem;
+}
+.search-bar input {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    margin: 5px 4px;
+    text-align: center;
+    display: inline-block;
+}
+
+.nav__logo-link .nav-logo {
+    background-color: transparent;
+    float: none;
+    position: relative;
+    width: 5rem;
+    height: 27px;
+}
+
+.nav-link {
+    margin-left: 10px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    border: 1px solid transparent;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    height: 100%;
+    font-size: 0;
+}
+
+.nav__logo-link {
+    padding: 1px 18px 0px 2px;
+}
+
+.nav-link:hover {
+    border: 1px solid white;
+}
+
+.nav-logo img {
+    object-fit: contain;
+    float: none;
+    width: 100%;
+    height: 100%;
+}
+
+.nav-logo span {
+    color: white;
+    position: absolute;
+    margin: 6px 1px;
+    line-height: 6px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.nav__address-link > span {
+    position: relative;
+    margin-right: auto;
+    color: #ccc;
+    font-size: 14px;
+    left: 20px;
+}
+
+.content {
+    flex-basis: 100%;
+}
+
+.location-dot {
+    font-size: 15px;
+    padding-right: 4px;
+}
+
+.content-heading {
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.caret-down {
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.account {
+    width: 8.5rem;
+}
+
+.location {
+    width: 9.5rem;
+}
+
+.orders {
+    width: 5.5rem;
+}
+
+.nav__account-link > span {
+    position: relative;
+    margin-right: auto;
+    color: #fff;
+    font-size: 14px;
+    left: 8px;
+}
+
+.nav__orders-link > span {
+    position: relative;
+    margin-right: auto;
+    color: #fff;
+    font-size: 14px;
+    left: 16px;
+}
+
+.cart {
+    width: 6.5rem;
+    margin-right: 1.5em;
+}
+
+.cart-icon {
+    font-size: 2rem;
+}
+
+.cart-total-item {
+    font-size: 1rem;
+    display: inline-block;
+    color: orange;
+    font-weight: 700;
+}
