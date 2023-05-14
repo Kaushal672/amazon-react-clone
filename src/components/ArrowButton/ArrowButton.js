@@ -2,14 +2,15 @@ import classes from './ArrowButton.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
-const ArrowButton = function (props) {
+const ArrowButton = function ({ direction, onClick, style = {} }) {
     return (
         <>
-            {props.direction === 'left' && (
+            {direction === 'left' && (
                 <button
-                    onClick={props.onClick}
+                    onClick={onClick}
                     type='button'
-                    className={`${classes.btn} ${classes['arrow-left']}`}>
+                    className={`${classes.btn} ${classes['arrow-left']}`}
+                    style={style}>
                     <FontAwesomeIcon
                         icon={faAngleLeft}
                         size='3x'
@@ -17,11 +18,12 @@ const ArrowButton = function (props) {
                     />
                 </button>
             )}
-            {props.direction === 'right' && (
+            {direction === 'right' && (
                 <button
-                    onClick={props.onClick}
+                    onClick={onClick}
                     type='button'
-                    className={`${classes.btn} ${classes['arrow-right']}`}>
+                    className={`${classes.btn} ${classes['arrow-right']}`}
+                    style={style}>
                     <FontAwesomeIcon
                         icon={faAngleRight}
                         size='3x'

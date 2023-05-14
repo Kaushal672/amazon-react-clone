@@ -6,8 +6,9 @@
     background-color: transparent;
     cursor: pointer;
     border-radius: 4px;
-    position: relative;
+    position: absolute;
     margin: 3px;
+    z-index: 10;
 }
 
 .btn:focus {
