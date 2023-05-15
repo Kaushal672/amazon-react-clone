@@ -3,7 +3,7 @@ import ArrowButtom from '../ArrowButton/ArrowButton';
 import SliderCard from '../SliderCard/SliderCard';
 import classes from './CardSlider.module.css';
 
-const CardSlider = ({ cards }) => {
+const CardSlider = ({ cards, category }) => {
     const [slideIndex, setSlideIndex] = useState(0);
 
     const handlePrevButton = () => {
@@ -24,7 +24,7 @@ const CardSlider = ({ cards }) => {
     };
     return (
         <div className={classes['card__slider-wrapper']}>
-            <h2 className={classes['product-category']}>Today's deals</h2>
+            <h2 className={classes['product-category']}>{category}</h2>
             <ArrowButtom
                 direction='left'
                 style={{
