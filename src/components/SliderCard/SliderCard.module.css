@@ -30,13 +30,13 @@
 }
 
 .discount-badge {
-    font-size: 14px;
+    font-size: 12px;
     background-color: #ef233c;
     color: white;
     width: fit-content;
     height: fit-content;
     margin-right: 1rem;
-    padding: 0.2rem;
+    padding: 0.3rem;
     border-radius: 2px;
 }
 

@@ -52,7 +52,15 @@ const CardSlider = ({ cards, category }) => {
                         transform: `translateX(-${slideIndex * (100 / 6)}%)`,
                     }}>
                     {cards.map((card, i) => (
-                        <SliderCard card={card} key={i} />
+                        <SliderCard
+                            card={card}
+                            key={i}
+                            category={
+                                category === "Today's deals"
+                                    ? 'Deals of the day'
+                                    : 'Best Seller'
+                            }
+                        />
                     ))}
                 </div>
             </div>
