@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import ArrowButton from '../ArrowButton/ArrowButton';
 import Card from '../Card/Card';
 import classes from './Carousel.module.css';
@@ -15,6 +15,8 @@ const slideImages = [
 
 const Carousel = function () {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [status, setStatus] = useState('working');
+    const intervalRef = useRef();
 
     const moveCarousel = useCallback(
         (move) => {
@@ -28,9 +30,13 @@ const Carousel = function () {
     );
 
     useEffect(() => {
-        const changeSlide = setInterval(() => moveCarousel(1), 8000);
-        return () => clearInterval(changeSlide);
+        intervalRef.current = setInterval(() => moveCarousel(1), 5000);
+        return () => clearInterval(intervalRef.current);
     }, [currentIndex, moveCarousel]);
+
+    useEffect(() => {
+        if (status === 'paused') clearInterval(intervalRef.current);
+    }, [status]);
 
     return (
         <div className={classes['carousel-content']}>
@@ -48,11 +54,17 @@ const Carousel = function () {
                     <div className={classes['carousel__slide-btns']}>
                         <ArrowButton
                             direction='left'
-                            onClick={() => moveCarousel(-1)}
+                            onClick={() => {
+                                moveCarousel(-1);
+                                setStatus('paused');
+                            }}
                         />
                         <ArrowButton
                             direction='right'
-                            onClick={() => moveCarousel(1)}
+                            onClick={() => {
+                                moveCarousel(1);
+                                setStatus('paused');
+                            }}
                         />
                     </div>
                 </div>
