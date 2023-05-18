@@ -1,0 +1,113 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.modal {
+    position: fixed;
+    top: 30vh;
+    left: 40%;
+    width: 20%;
+    z-index: 100;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 8px;
+}
+
+p ~ button {
+    flex: 1;
+    width: 100% !important;
+    margin-bottom: 0.5rem;
+    color: #212529;
+}
+
+.modal-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content p {
+    font-size: 12px;
+    line-height: 16px;
+    color: #565959;
+    margin-bottom: 0.5rem;
+}
+
+.header {
+    height: 50px;
+    background: #e9ecef;
+    padding: 1rem;
+}
+
+.header h4 {
+    color: black;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.line {
+    flex: 1;
+    height: 1px;
+    background-color: #212529;
+}
+
+.text {
+    padding: 0 10px;
+}
+
+.form-control {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-control input {
+    height: 30px;
+    border-radius: 4px;
+    outline: 1px solid #6e6e6e;
+    margin-right: 20px;
+}
+
+.form-control button {
+    height: 30px;
+    width: 80px;
+    background-color: white;
+    border: 1px solid #d5d9d9;
+    line-height: 10px;
+    box-shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
+}
+
+.form-control button:hover {
+    background-color: #fbfbfb;
+}
+
+.form-control p {
+    color: #e5383b;
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+.footer {
+    padding: 0rem 1rem 1rem 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer button {
+    background-color: #e5383b;
+    color: white;
+}
+
+.footer button:hover {
+    background-color: #ba181b;
+}
