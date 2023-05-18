@@ -3,6 +3,7 @@ import classes from './SliderCard.module.css';
 const SliderCard = function ({ card, category }) {
     return (
         <div className={classes.card}>
+            <a href='' className={classes['card-link']}></a>
             <div className={classes['product-image']}>
                 <img
                     src={card.imageUrl}

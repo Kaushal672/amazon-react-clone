@@ -8,7 +8,7 @@
     border-radius: 4px;
     position: absolute;
     margin: 3px;
-    z-index: 10;
+    z-index: 80;
 }
 
 .btn:focus {

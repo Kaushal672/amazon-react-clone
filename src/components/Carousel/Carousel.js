@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import ArrowButton from '../ArrowButton/ArrowButton';
 import Card from '../Card/Card';
 import classes from './Carousel.module.css';
@@ -15,14 +15,22 @@ const slideImages = [
 
 const Carousel = function () {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const handlePreviousButton = () => {
-        setCurrentIndex(
-            (currentIndex - 1 + slideImages.length) % slideImages.length
-        );
-    };
-    const handleNextButton = () => {
-        setCurrentIndex((currentIndex + 1) % slideImages.length);
-    };
+
+    const moveCarousel = useCallback(
+        (move) => {
+            const totalSlides = slideImages.length;
+            let nextSlide = (currentIndex + move) % totalSlides;
+
+            if (nextSlide < 0) nextSlide = totalSlides - 1;
+            setCurrentIndex(nextSlide);
+        },
+        [currentIndex]
+    );
+
+    useEffect(() => {
+        const changeSlide = setInterval(() => moveCarousel(1), 8000);
+        return () => clearInterval(changeSlide);
+    }, [currentIndex, moveCarousel]);
 
     return (
         <div className={classes['carousel-content']}>
@@ -40,11 +48,11 @@ const Carousel = function () {
                     <div className={classes['carousel__slide-btns']}>
                         <ArrowButton
                             direction='left'
-                            onClick={handlePreviousButton}
+                            onClick={() => moveCarousel(-1)}
                         />
                         <ArrowButton
                             direction='right'
-                            onClick={handleNextButton}
+                            onClick={() => moveCarousel(1)}
                         />
                     </div>
                 </div>
