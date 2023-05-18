@@ -84,7 +84,7 @@ form button {
     display: inline-block;
     max-width: 120px;
     line-height: 15px;
-    margin-right: 4px;
+    margin-right: 8px;
     margin-left: 5px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -133,4 +133,10 @@ form button {
 
 .search-btn:hover {
     background-color: #ffb451;
+}
+
+.nav-search-scope:hover,
+.nav-search-scope:focus-within {
+    background-color: #d9d8d8;
+    border-color: #d9d8d8;
 }

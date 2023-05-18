@@ -30,7 +30,7 @@ const SearchBar = (props) => {
                                 className={`${classes['nav-search-scope']} ${classes['nav-sprite']}`}>
                                 <div className={classes['nav-search-facade']}>
                                     <span id={classes['nav-search-label']}>
-                                        {categoryState || 'All Categories'}
+                                        {categoryState || 'All'}
                                     </span>
                                     <FontAwesomeIcon
                                         className={classes.caretDown}
