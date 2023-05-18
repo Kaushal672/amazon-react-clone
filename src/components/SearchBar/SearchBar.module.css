@@ -117,10 +117,20 @@ form button {
     cursor: pointer;
 }
 
+.search-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .nav-search-scope.nav-sprite:focus-within {
     box-shadow: 0 0 0 2pt #ffa200;
 }
 
 .search-btn:focus {
     box-shadow: 0 0 0 2pt #ffa200;
+}
+
+.search-btn:hover {
+    background-color: #ffb451;
 }

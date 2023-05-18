@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import Button from '../Button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
@@ -93,7 +94,7 @@ const SearchBar = (props) => {
                         placeholder='Search anything'
                     />
                     <button type='submit' className={classes['search-btn']}>
-                        <FontAwesomeIcon icon={faSearch} />
+                        <FontAwesomeIcon icon={faSearch} size='xl' />
                     </button>
                 </div>
             </form>
