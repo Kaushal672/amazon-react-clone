@@ -15,8 +15,7 @@ const slideImages = [
 
 const Carousel = function () {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [status, setStatus] = useState('working');
-    const intervalRef = useRef();
+    const [autoSlide, setAutoSlide] = useState(true);
 
     const moveCarousel = useCallback(
         (move) => {
@@ -30,13 +29,12 @@ const Carousel = function () {
     );
 
     useEffect(() => {
-        intervalRef.current = setInterval(() => moveCarousel(1), 5000);
-        return () => clearInterval(intervalRef.current);
-    }, [currentIndex, moveCarousel]);
-
-    useEffect(() => {
-        if (status === 'paused') clearInterval(intervalRef.current);
-    }, [status]);
+        let slideInterval;
+        if (autoSlide) {
+            slideInterval = setInterval(() => moveCarousel(1), 5000);
+        }
+        return () => clearInterval(slideInterval);
+    }, [autoSlide, moveCarousel]);
 
     return (
         <div className={classes['carousel-content']}>
@@ -56,14 +54,14 @@ const Carousel = function () {
                             direction='left'
                             onClick={() => {
                                 moveCarousel(-1);
-                                setStatus('paused');
+                                setAutoSlide((prevState) => !prevState);
                             }}
                         />
                         <ArrowButton
                             direction='right'
                             onClick={() => {
                                 moveCarousel(1);
-                                setStatus('paused');
+                                setAutoSlide((prevState) => !prevState);
                             }}
                         />
                     </div>
