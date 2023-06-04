@@ -1,0 +1,35 @@
+.modal {
+    position: fixed;
+    top: 30vh;
+    left: 40%;
+    width: 20%;
+    z-index: 100;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.header {
+    height: 50px;
+    background: #e9ecef;
+    padding: 1rem;
+}
+
+.header h4 {
+    color: black;
+}
+
+.footer {
+    padding: 0rem 1rem 1rem 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer button {
+    background-color: #e5383b;
+    color: white;
+}
+
+.footer button:active:hover {
+    background-color: #ba181b;
+}

@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
+import Backdrop from '../Backdrop/Backdrop';
 import Button from '../Button/Button';
+import ModalCard from '../ModalCard/ModalCard';
 import classes from './Modal.module.css';
 
 const Modal = function (props) {
@@ -29,18 +31,9 @@ const Modal = function (props) {
             });
     };
 
-    const Backdrop = (props) => {
-        return (
-            <div className={classes.backdrop} onClick={props.onConfirm}></div>
-        );
-    };
-
     const ModalOverlay = (props) => {
         return (
-            <div className={classes.modal}>
-                <header className={classes.header}>
-                    <h4>{props.title || 'Choose Your location'}</h4>
-                </header>
+            <ModalCard title={props.title} onConfirm={props.onConfirm}>
                 <div className={classes['modal-content']}>
                     <p>
                         Select a delivery location to see product availability
@@ -67,10 +60,7 @@ const Modal = function (props) {
                         {showError && <p>Please enter valid pincode</p>}
                     </form>
                 </div>
-                <footer className={classes.footer}>
-                    <Button onClick={props.onConfirm}>Close</Button>
-                </footer>
-            </div>
+            </ModalCard>
         );
     };
 
