@@ -5,13 +5,7 @@ p ~ button {
     color: #212529;
 }
 
-.modal-content {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-}
-
-.modal-content p {
+.desc {
     font-size: 12px;
     line-height: 16px;
     color: #565959;

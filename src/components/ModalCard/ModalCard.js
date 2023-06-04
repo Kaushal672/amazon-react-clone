@@ -7,7 +7,7 @@ const ModalCard = (props) => {
             <header className={classes.header}>
                 <h4>{props.title}</h4>
             </header>
-            {props.children}
+            <div className={classes['modal-content']}>{props.children}</div>
             <footer className={classes.footer}>
                 <Button onClick={props.onConfirm}>Close</Button>
             </footer>

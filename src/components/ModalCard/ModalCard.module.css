@@ -33,3 +33,9 @@
 .footer button:active:hover {
     background-color: #ba181b;
 }
+
+.modal-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}

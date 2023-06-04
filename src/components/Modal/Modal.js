@@ -34,32 +34,28 @@ const Modal = function (props) {
     const ModalOverlay = (props) => {
         return (
             <ModalCard title={props.title} onConfirm={props.onConfirm}>
-                <div className={classes['modal-content']}>
-                    <p>
-                        Select a delivery location to see product availability
-                        and delivery options
-                    </p>
-                    <Button>Sign in to see your address</Button>
-                    <div className={classes.container}>
-                        <span className={classes.line}></span>
-                        <span className={classes.text}>
-                            or enter your pincode
-                        </span>
-                        <span className={classes.line}></span>
-                    </div>
-                    <form
-                        className={classes['form-control']}
-                        onSubmit={formSubmitHandler}>
-                        <input
-                            type='text'
-                            name='pincode'
-                            value={pinCode}
-                            onChange={(e) => setPinCode(e.target.value)}
-                        />
-                        <Button type='submit'>Apply</Button>
-                        {showError && <p>Please enter valid pincode</p>}
-                    </form>
+                <p className={classes['desc']}>
+                    Select a delivery location to see product availability and
+                    delivery options
+                </p>
+                <Button>Sign in to see your address</Button>
+                <div className={classes.container}>
+                    <span className={classes.line}></span>
+                    <span className={classes.text}>or enter your pincode</span>
+                    <span className={classes.line}></span>
                 </div>
+                <form
+                    className={classes['form-control']}
+                    onSubmit={formSubmitHandler}>
+                    <input
+                        type='text'
+                        name='pincode'
+                        value={pinCode}
+                        onChange={(e) => setPinCode(e.target.value)}
+                    />
+                    <Button type='submit'>Apply</Button>
+                    {showError && <p>Please enter valid pincode</p>}
+                </form>
             </ModalCard>
         );
     };
