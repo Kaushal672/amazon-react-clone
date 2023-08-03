@@ -1,7 +1,6 @@
-import MainNavBar from './components/Layout/MainNavBar';
-import Carousel from './components/Carousel/Carousel';
-import Content from './components/Content/Content';
-import CardSlider from './components/CardSlider/CardSlider';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './router';
+import Bus from './utils/Bus';
 
 import './App.css';
 const cards = [
@@ -64,17 +63,7 @@ const cards = [
 ];
 
 function App() {
-    return (
-        <div className='App'>
-            <MainNavBar />
-            <Content>
-                <div id='nav-backdrop-root'></div>
-                <Carousel />
-                <CardSlider cards={cards} category="Today's deals" />
-                <CardSlider cards={cards} category='Best Sellers of the week' />
-            </Content>
-        </div>
-    );
+    return <RouterProvider router={router} />;
 }
 
 export default App;
