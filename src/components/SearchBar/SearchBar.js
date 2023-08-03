@@ -39,48 +39,39 @@ const SearchBar = (props) => {
                                 </div>
                                 <label
                                     id={classes['select-label']}
-                                    htmlFor='searchDropDownBox'>
+                                    htmlFor={`search-category-${display}`}>
                                     Select category for your search
                                 </label>
                                 <select
-                                    defaultValue={'All categories'}
+                                    name='category'
+                                    defaultValue={'All'}
                                     onChange={handleSelectChange}
                                     className={classes['nav-search-dropdown']}
-                                    id={classes['searchDropDownBox']}>
-                                    <option value='All categories'>
-                                        All categories
+                                    id={`search-category-${display}`}>
+                                    <option value='All'>All categories</option>
+                                    <option value='Electronics'>
+                                        Electronics
                                     </option>
-                                    <option value='dummy2'>Dummy2</option>
-                                    <option value='Dummy22342342342342343242342343'>
-                                        Dummy22342342342342343242342343
+                                    <option value='Home Appliance'>
+                                        Home Appliance
                                     </option>
-                                    <option value='dummy3'>Dummy2</option>
-                                    <option value='dummy3'>Dummy2</option>
-                                    <option value='dummy3'>Dummy2</option>
-                                    <option value='dummy3'>Dummy2</option>
-                                    <option value='dummy3'>Dummy2</option>
-                                    <option value='dummy3'>Dummy2</option>
-                                    <option value='dummy3'>Dummy2</option>
-                                    <option value='dummy3'>Dummy2</option>
-                                    <option value='dummy3'>Dummy2</option>
-                                    <option value='dummy3'>Dummy2</option>
-                                    <option value='dummy3'>Dummy2</option>
-                                    <option value='dummy3'>Dummy2</option>
-                                    <option value='dummy3'>Dummy2</option>
-                                    <option value='dummy3'>Dummy2</option>
-                                    <option value='dummy3'>Dummy2</option>
-                                    <option value='dummy3'>Dummy2</option>
-                                    <option value='dummy3'>Dummy2</option>
-                                    <option value='dummy3'>Dummy2</option>
-                                    <option value='dummy3'>Dummy2</option>
-                                    <option value='dummy3'>Dummy2</option>
-                                    <option value='dummy3'>Dummy2</option>
-                                    <option value='dummy3'>Dummy2</option>
-                                    <option value='dummy3'>Dummy2</option>
-                                    <option value='dummy3'>Dummy2</option>
-                                    <option value='dummy4'>Dummy3</option>
-                                    <option value='dummy5'>Dummy4</option>
-                                    <option value='dummy6'>Dummy5</option>
+                                    <option value='Travelling'>
+                                        Travelling
+                                    </option>
+                                    <option value='Gaming'>Gaming</option>
+                                    <option value='Office Products'>
+                                        Office Products
+                                    </option>
+                                    <option value='Clothing & Accessories'>
+                                        Clothing & Accessories
+                                    </option>
+                                    <option value='Grocery & Gourmet Food'>
+                                        Grocery & Garmet Food
+                                    </option>
+                                    <option value='Furniture'>Furniture</option>
+                                    <option value='Home & Kitchen'>
+                                        Home & Kitchen
+                                    </option>
                                 </select>
                             </div>
                         </div>
