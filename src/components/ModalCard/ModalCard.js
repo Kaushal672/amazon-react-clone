@@ -1,15 +1,15 @@
 import Button from '../Button/Button';
 import classes from './ModalCard.module.css';
 
-const ModalCard = (props) => {
+const ModalCard = ({ style, title, children, onConfirm }) => {
     return (
-        <div className={classes.modal}>
+        <div id='c' className={classes.modal}>
             <header className={classes.header}>
-                <h4>{props.title}</h4>
+                <h4 style={style}>{title}</h4>
             </header>
-            <div className={classes['modal-content']}>{props.children}</div>
+            <div className={classes['modal-content']}>{children}</div>
             <footer className={classes.footer}>
-                <Button onClick={props.onConfirm}>Close</Button>
+                <Button onClick={onConfirm}>Close</Button>
             </footer>
         </div>
     );
