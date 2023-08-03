@@ -1,16 +1,17 @@
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback } from 'react';
+
 import ArrowButton from '../ArrowButton/ArrowButton';
 import Card from '../Card/Card';
 import classes from './Carousel.module.css';
 
 const slideImages = [
-    require('../../images/slide-1.jpg'),
-    require('../../images/slide-2.jpg'),
-    require('../../images/slide-3.jpg'),
-    require('../../images/slide-4.jpg'),
-    require('../../images/slide-5.png'),
-    require('../../images/slide-6.jpg'),
-    require('../../images/slide-7.jpg'),
+    'https://res.cloudinary.com/dlds2z087/image/upload/v1690977892/Amazon-Products/slides/slide-1_qjrje0.jpg',
+    'https://res.cloudinary.com/dlds2z087/image/upload/v1690977897/Amazon-Products/slides/slide-2_b4fhui.jpg',
+    'https://res.cloudinary.com/dlds2z087/image/upload/v1690977894/Amazon-Products/slides/slide-3_wapunn.jpg',
+    'https://res.cloudinary.com/dlds2z087/image/upload/v1690977896/Amazon-Products/slides/slide-4_tqxqit.jpg',
+    'https://res.cloudinary.com/dlds2z087/image/upload/v1690977947/Amazon-Products/slides/slide-5_yfnfxw.png',
+    'https://res.cloudinary.com/dlds2z087/image/upload/v1690977904/Amazon-Products/slides/slide-6_tanh45.jpg',
+    'https://res.cloudinary.com/dlds2z087/image/upload/v1690977911/Amazon-Products/slides/slide-7_mvuoie.jpg',
 ];
 
 const Carousel = function () {
@@ -69,18 +70,22 @@ const Carousel = function () {
             </div>
             <div className={classes['card-container']}>
                 <Card
+                    id={1}
                     title='Up to 70% off | Clearance store'
                     img={require('../../images/Card-1.jpg')}
                 />
                 <Card
+                    id={2}
                     title='Bluetooth Calling Smartwatch starts at ₹1,999'
                     img={require('../../images/Card-2.jpg')}
                 />
                 <Card
+                    id={3}
                     title='Kitchen organizers from local shops'
                     img={require('../../images/Card-3.jpg')}
                 />
                 <Card
+                    id={4}
                     title='Casual wear series from local shops'
                     img={require('../../images/Card-4.jpg')}
                 />
