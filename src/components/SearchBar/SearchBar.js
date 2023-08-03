@@ -1,10 +1,11 @@
 import { useRef, useState } from 'react';
+import { Form } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 import classes from './SearchBar.module.css';
 
-const SearchBar = (props) => {
+const SearchBar = ({ display }) => {
     const [categoryState, setCategoryState] = useState('');
     const containerRef = useRef(null);
 
@@ -21,7 +22,7 @@ const SearchBar = (props) => {
 
     return (
         <div className={classes.container}>
-            <form>
+            <Form action='/search' method='get'>
                 <div className={classes.controls} ref={containerRef}>
                     <div className={classes['nav-left']}>
                         <div id={classes['nav-search-dropdown-card']}>
@@ -83,11 +84,14 @@ const SearchBar = (props) => {
                         name='q'
                         placeholder='Search anything'
                     />
-                    <button type='submit' className={classes['search-btn']}>
+                    <button
+                        type='submit'
+                        className={classes['search-btn']}
+                        aria-label='search'>
                         <FontAwesomeIcon icon={faSearch} size='xl' />
                     </button>
                 </div>
-            </form>
+            </Form>
         </div>
     );
 };
