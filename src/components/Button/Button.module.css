@@ -1,15 +1,28 @@
 .btn {
+    margin: 0.5rem 0;
     border: none;
     outline: none;
     background-color: #ffd814;
     border-radius: 6px;
-    width: fit-content;
-    height: fit-content;
-    padding: 0.5rem;
     cursor: pointer;
+    display: inline-block;
+    white-space: nowrap;
+    min-width: 26%;
+    padding: 0.5rem;
     text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
 }
 
+.btn:active,
 .btn:hover {
     background-color: #f6ce04;
+}
+
+button:disabled,
+button[disabled] {
+    background-color: #f6e696;
+    cursor: default;
+    color: #5b5a5a;
 }
