@@ -1,12 +1,15 @@
 .modal {
-    position: fixed;
-    top: 30vh;
-    left: 40%;
+    position: absolute;
     width: 20%;
-    z-index: 100;
+    min-width: 300px;
+    z-index: 1200;
     overflow: hidden;
     background-color: white;
     border-radius: 8px;
+    min-height: 20%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 14px 0 rgba(15, 17, 17, 0.5);
 }
 
 .header {
@@ -16,10 +19,13 @@
 }
 
 .header h4 {
+    font-size: larger;
     color: black;
 }
 
 .footer {
+    margin-top: auto;
+    justify-self: baseline;
     padding: 0rem 1rem 1rem 1rem;
     display: flex;
     justify-content: flex-end;
@@ -30,7 +36,8 @@
     color: white;
 }
 
-.footer button:active:hover {
+.footer button:active,
+.footer button:hover {
     background-color: #ba181b;
 }
 
@@ -38,4 +45,10 @@
     padding: 1rem;
     display: flex;
     flex-direction: column;
+}
+
+@media (max-width: 300px) {
+    .modal {
+        min-width: 250px;
+    }
 }
