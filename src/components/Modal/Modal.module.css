@@ -1,4 +1,4 @@
-p ~ button {
+.desc ~ button {
     flex: 1;
     width: 100% !important;
     margin-bottom: 0.5rem;
@@ -18,6 +18,14 @@ p ~ button {
     margin-bottom: 1rem;
 }
 
+.container + div {
+    left: 45%;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+}
+
 .line {
     flex: 1;
     height: 1px;
@@ -28,34 +36,67 @@ p ~ button {
     padding: 0 10px;
 }
 
-.form-control {
+.form {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
 }
 
-.form-control input {
+.form input {
+    padding-left: 5px;
+    flex: 1;
     height: 30px;
-    border-radius: 4px;
-    outline: 1px solid #6e6e6e;
+    border: 1px solid #9e9999;
+    border-radius: 5px;
+    outline: none;
     margin-right: 20px;
+    box-shadow: inset 0 0 1px 1px #ccc;
+    background-color: #fff;
 }
 
-.form-control button {
+.form input:focus {
+    border: 1px solid #6c6c6c;
+    box-shadow: 0 0 3px 3px lightblue;
+}
+
+.form button {
     height: 30px;
     width: 80px;
     background-color: white;
     border: 1px solid #d5d9d9;
     line-height: 10px;
+    margin: 0px !important;
     box-shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
 }
 
-.form-control button:active:hover {
+.form button:active,
+.form button:hover {
     background-color: #fbfbfb;
 }
 
-.form-control p {
+.error {
     color: #e5383b;
     font-size: 14px;
     padding-top: 5px;
+}
+
+.default-address {
+    border: 4px solid #264653;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    background-color: #eee;
+}
+
+.default-address > ul > li {
+    line-height: 20px;
+    font-size: 14px;
+}
+
+.default-address > span {
+    font-weight: 600;
+    color: #565959;
+}
+
+.address-link {
+    color: #264653;
+    margin: 0.2rem 1rem;
 }
