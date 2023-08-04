@@ -150,3 +150,9 @@
         padding: 1rem;
     }
 }
+
+@media (max-width: 360px) {
+    .cart-empty__logo {
+        min-width: 100px;
+    }
+}
