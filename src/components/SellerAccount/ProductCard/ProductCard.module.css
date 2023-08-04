@@ -1,0 +1,130 @@
+.product__card-wrapper {
+    display: flex;
+    width: 100%;
+    height: 30rem;
+    max-height: 200px;
+    border: 1px solid #ddd;
+    margin: 1rem 0;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.product__card-img {
+    height: 100%;
+    width: 15%;
+    min-width: 100px;
+}
+
+.product__card-img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.product__card-content {
+    margin-left: 2rem;
+    width: 100%;
+}
+
+.product__card-title {
+    display: -webkit-box;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    width: 95%;
+    height: fit-content;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 1rem;
+}
+
+.overall-rating {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    top: -2px;
+}
+
+.rating > span:last-child > div {
+    margin: 0.2rem 0;
+}
+
+.product__card-discount {
+    font-size: 18px;
+    color: red;
+    margin-right: 1rem;
+}
+
+.product__card-discount::before {
+    content: 'Discount: ';
+}
+
+.product__card-discount::after {
+    content: '%';
+}
+
+.product__card-price {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.product__card-price::before {
+    content: 'Price: ₹';
+}
+
+.product__card-actions {
+    width: 100%;
+}
+
+.product__card-actions form {
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+.product__card-actions button,
+.product__card-actions a {
+    display: inline-block;
+    min-width: 0;
+    color: white;
+    width: 4rem !important;
+}
+
+.product__card-actions a {
+    background-color: #2ba84a;
+}
+
+.product__card-actions button {
+    background-color: #c44536;
+}
+
+.product__card-actions a:hover {
+    background-color: #2f9549;
+}
+
+.product__card-actions button:hover {
+    background-color: #b14336;
+}
+
+@media (max-width: 480px) {
+    .product__card-wrapper {
+        flex-wrap: wrap;
+        max-height: 400px;
+    }
+
+    .product__card-img {
+        height: 50%;
+        width: 100%;
+    }
+
+    .product__card-content {
+        margin-left: 0;
+    }
+
+    .product__card-title {
+        width: 100%;
+    }
+}

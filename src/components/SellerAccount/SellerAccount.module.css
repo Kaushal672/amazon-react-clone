@@ -1,0 +1,455 @@
+.seller__details-products {
+    width: 100%;
+    margin: 1rem 0;
+    padding-top: 1rem;
+    border-top: 1px solid #ccc;
+}
+
+.seller__details {
+    width: 90%;
+    margin: 0 1rem;
+}
+
+.seller__details-add-product {
+    display: flex;
+    margin: 2rem 0;
+    width: 100%;
+}
+
+.seller__details-add-card {
+    flex: 1;
+    display: flex;
+    padding: 0.5rem 1rem;
+    height: fit-content;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1faee;
+    width: 100%;
+}
+
+.seller__details-slogan > h2 {
+    font-size: 32px;
+}
+
+.seller__details-slogan > p {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.seller__details-add-card > a {
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffa200;
+    font-size: 16px;
+    min-width: 20%;
+    border-radius: 25px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.seller__details-slogan {
+    margin: 0 1rem;
+    max-width: 50rem;
+}
+
+.seller__details-add-card > a:hover,
+.seller__details-add-card > a:active {
+    background-color: #ff8d01;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.seller__details-img {
+    width: 20%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.seller-account__container {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.seller-register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.seller-register__container {
+    min-width: 99vw;
+    height: 80px;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 2rem;
+}
+
+.seller-register__button {
+    margin-left: auto;
+}
+
+.sell-detail__container {
+    width: 100vw;
+    position: relative;
+}
+
+.seller-register__container {
+    display: flex;
+    align-items: center;
+}
+
+.seller-register__button > button {
+    float: right;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffa200;
+    font-size: 16px;
+    padding: 0.5rem 1.5rem;
+    min-width: 20%;
+    border-radius: 25px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.seller-register__button > button:hover,
+.seller-register__button > button:active {
+    background-color: #ff8d01;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.seller-banner__content {
+    position: relative;
+    background: url('../../images/wave.svg') top center no-repeat;
+    background-size: 150%;
+    margin-top: 1rem;
+    width: 100vw;
+    text-align: left;
+    display: flex;
+}
+
+.seller-banner__padding {
+    padding: 5rem 10rem;
+}
+
+.seller-banner__detail {
+    flex: 1 1 50%;
+}
+
+.seller-banner__detail > span {
+    display: inline-block;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding: 0.5rem 1rem;
+    background-color: #3a86ff;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+        rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.banner-heading {
+    padding: 1rem 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 50px;
+    color: #232f3e;
+}
+
+.seller-banner__detail-para {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.seller-banner__img {
+    width: 50%;
+}
+
+.seller-banner__img > img {
+    float: right;
+    width: 100%;
+    object-fit: contain;
+}
+
+.seller-banner__button {
+    padding: 1rem 0;
+    float: left;
+}
+
+.seller-banner__button > button {
+    padding: 0.5rem 3rem;
+    font-size: 22px;
+}
+
+.register-form {
+    z-index: 90;
+    overflow: hidden;
+    position: relative;
+}
+
+.sell-cards__container {
+    overflow: hidden;
+}
+
+.sell-cards__wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.seller-reviews {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0 !important;
+    flex-direction: column;
+}
+
+.seller-reviews > h2 {
+    margin-bottom: 2rem;
+}
+
+.sell-detail__end-card {
+    position: relative;
+    background: url('../../images/wave-bottom.svg') bottom center no-repeat;
+    background-size: 190%;
+    width: 100%;
+    display: flex;
+    align-items: last baseline;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.sell-card__end-content > p {
+    max-width: 80%;
+}
+
+.sell-card__end-img {
+    margin-top: auto;
+    width: 50%;
+    height: 50%;
+    object-position: right;
+    object-fit: contain;
+}
+
+.seller-banner__button > button {
+    float: left;
+}
+
+@media (max-width: 1800px) {
+    .seller-banner__padding {
+        padding: 3rem 6rem;
+    }
+    .banner-heading {
+        font-size: 40px;
+    }
+
+    .seller-banner__detail-para {
+        font-size: 20px;
+    }
+
+    .seller-banner__button > button {
+        padding: 0.5rem 2rem;
+    }
+}
+
+@media (max-width: 1400px) {
+    .seller-banner__padding {
+        padding: 2rem 4rem;
+    }
+    .banner-heading {
+        font-size: 32px;
+    }
+
+    .seller-banner__detail-para {
+        font-size: 18px;
+    }
+
+    .seller-banner__button > button {
+        font-size: 14px;
+    }
+
+    .seller-register__container > h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .seller__details-slogan > h2 {
+        font-size: 26px;
+    }
+
+    .seller__details-slogan > p {
+        font-size: 16px;
+    }
+
+    .banner-heading {
+        font-size: 24px;
+    }
+
+    .seller-banner__detail-para {
+        font-size: 16px;
+    }
+
+    .seller-banner__button {
+        padding: 0.2rem 0;
+    }
+
+    .seller-banner__padding {
+        padding: 1rem 2rem;
+    }
+
+    .seller-banner__padding {
+        padding: 1rem 1rem;
+    }
+}
+
+@media (max-width: 780px) {
+    .seller__details-add-card {
+        flex-wrap: wrap;
+    }
+
+    .seller__details-add-card > img {
+        flex: 1 0 40%;
+    }
+
+    .seller__details-add-card > div {
+        flex: 1 0 50%;
+    }
+
+    .seller__details-add-card > a {
+        flex: 0 1 80%;
+    }
+
+    .sell-cards__container > h2 {
+        text-align: center;
+    }
+
+    .banner-heading {
+        font-size: 22px;
+        padding: 0;
+    }
+
+    .seller-banner__detail-para {
+        font-size: 14px;
+    }
+
+    .seller-banner__detail > span {
+        letter-spacing: 2px;
+        padding: 0.5rem 0.5rem;
+        font-size: 14px;
+    }
+
+    .sell-detail__end-card {
+        background-size: 230%;
+    }
+
+    .seller-register__container > h2 {
+        font-size: 1rem;
+    }
+
+    .seller-register__container {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .sell-cards__wrapper {
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 640px) {
+    .banner-heading {
+        font-size: 18px;
+    }
+    .seller__details-slogan > h2 {
+        font-size: 20px;
+    }
+    .seller__details-slogan > p {
+        font-size: 14px;
+    }
+
+    .seller-banner__content {
+        flex-direction: column-reverse;
+        align-items: center;
+        background-size: cover;
+    }
+
+    .sell-detail__end-card {
+        flex-direction: column;
+        align-items: center;
+        background-size: 260%;
+        background-position: 10% 80%;
+    }
+
+    .sell-card__end-img {
+        display: none;
+    }
+
+    .sell-card__end-content {
+        padding-top: 5rem;
+        text-align: center;
+    }
+
+    .sell-card__end-content > p {
+        max-width: 100%;
+    }
+
+    .seller-banner__img {
+        width: 100%;
+    }
+    .seller-banner__detail > span {
+        margin: 0.5rem 0;
+    }
+
+    .seller-banner__detail {
+        width: 100%;
+        text-align: center;
+    }
+    .seller-banner__button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    section > svg {
+        top: 55% !important;
+        transform: scale(4) !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .seller-register__container > h2 {
+        font-size: 14px;
+    }
+
+    .seller-register__button > button {
+        padding: 0.5rem 1rem;
+        font-size: 14px;
+    }
+
+    .seller__details-slogan > h2 {
+        font-size: 18px;
+    }
+    .seller__details-slogan > p {
+        font-size: 12px;
+    }
+
+    .sell-detail__end-card {
+        background-size: 360%;
+    }
+}
+
+@media (max-width: 360px) {
+    .seller-register__container > h2 {
+        font-size: 12px;
+    }
+    .seller-register__button > button {
+        font-size: 12px;
+    }
+    .sell-detail__end-card {
+        background-size: 500%;
+    }
+}

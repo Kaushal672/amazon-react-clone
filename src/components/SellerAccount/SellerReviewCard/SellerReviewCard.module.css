@@ -1,0 +1,122 @@
+.seller-reviews__card {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    padding: 2rem 4rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    width: 75%;
+}
+
+.seller-reviews__review {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    margin-bottom: 1rem;
+}
+
+.seller-reviews__name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    display: block;
+}
+
+.seller-reviews__company {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 18px;
+    display: block;
+    color: #686666;
+}
+
+@media (max-width: 1024px) {
+    .seller-reviews__card {
+        padding: 1rem 2rem;
+    }
+
+    .seller-reviews__review {
+        font-size: 26px;
+    }
+
+    .seller-reviews__name {
+        font-size: 18px;
+    }
+
+    .seller-reviews__company {
+        font-size: 16px;
+    }
+
+    .quote {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 780px) {
+    .seller-reviews__review {
+        font-size: 24px;
+    }
+
+    .seller-reviews__name {
+        font-size: 16px;
+    }
+
+    .seller-reviews__company {
+        font-size: 14px;
+    }
+
+    .quote {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 640px) {
+    .seller-reviews__card {
+        padding: 1rem 1rem;
+    }
+    .seller-reviews__review {
+        font-size: 22px;
+    }
+
+    .seller-reviews__name {
+        font-size: 14px;
+    }
+
+    .seller-reviews__company {
+        font-size: 12px;
+    }
+
+    .quote {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .seller-reviews__card {
+        width: 80%;
+    }
+    .seller-reviews__review {
+        font-size: 18px;
+    }
+
+    .seller-reviews__name {
+        font-size: 12px;
+    }
+
+    .seller-reviews__company {
+        font-size: 10px;
+    }
+
+    .quote {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 360px) {
+    .seller-reviews__review {
+        font-size: 16px;
+    }
+    .quote {
+        font-size: 16px;
+    }
+    .seller-reviews__card {
+        width: 90%;
+    }
+}
