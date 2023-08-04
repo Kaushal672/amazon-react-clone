@@ -34,8 +34,10 @@
 .nav__logo-link .nav-logo {
     background-color: transparent;
     position: relative;
-    width: 6rem;
-    height: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: auto;
 }
 
 .nav-link {
@@ -55,30 +57,21 @@
     justify-content: center;
 }
 
-.nav__logo-link {
-    margin-right: 20px;
-}
-
 .nav-link:hover {
     border: 1px solid white;
 }
 
-.nav-logo {
-    width: 100%;
-    height: 100%;
-}
-
 .nav-logo img {
-    width: 100%;
+    max-width: 6rem;
     height: 100%;
     object-fit: contain;
 }
 
 .nav-logo span {
     color: white;
-    position: absolute;
+    position: relative;
     font-size: 14px;
-    top: 12px;
+    top: 2px;
     line-height: 16px;
     font-weight: 400;
 }
