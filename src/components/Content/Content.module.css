@@ -1,9 +1,22 @@
 .content-wrapper {
+    position: relative;
     display: flex;
-    height: 100%;
-    width: 100%;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
-    max-width: 1500px;
+    max-width: 80vw;
+    width: 100%;
+    align-items: center;
     margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+    .content-wrapper {
+        max-width: 90vw;
+    }
+}
+
+@media (max-width: 1000px) {
+    .content-wrapper {
+        max-width: 100vw;
+    }
 }
