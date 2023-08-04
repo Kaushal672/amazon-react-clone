@@ -1,0 +1,16 @@
+.account-container {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    gap: 15px;
+    width: 90%;
+}
+
+.account-heading {
+    align-self: baseline;
+    margin: 1rem 0;
+    font-weight: 500;
+}

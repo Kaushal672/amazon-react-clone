@@ -1,0 +1,83 @@
+.account-card__container {
+    display: flex;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    height: 200px;
+    max-width: 800px;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.account-card__container:hover {
+    background-color: #eee;
+}
+
+.account-card__img {
+    width: 30%;
+    height: auto;
+    object-fit: contain;
+    margin: 1rem;
+}
+
+.account-card__content {
+    padding: 1rem;
+}
+
+.account-card__content h2 {
+    font-size: 26px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+.account-card__content p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+@media (max-width: 900px) {
+    .account-card__content h2 {
+        font-size: 24px;
+    }
+    .account-card__content p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 780px) {
+    .account-card__content h2 {
+        font-size: 22px;
+    }
+    .account-card__content p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 640px) {
+    .account-card__content h2 {
+        font-size: 20px;
+    }
+    .account-card__content p {
+        font-size: 14px;
+    }
+    .account-card__container {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .account-card__img {
+        margin: 0.5rem;
+    }
+
+    .account-card__content {
+        padding: 0.5rem;
+    }
+
+    .account-card__content h2 {
+        font-size: 18px;
+    }
+
+    .account-card__container {
+        height: 130px;
+    }
+}
