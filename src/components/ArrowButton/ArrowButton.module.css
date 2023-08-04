@@ -11,6 +11,14 @@
     z-index: 80;
 }
 
+.btn:disabled {
+    background-color: #f5f3f4 !important;
+}
+
+.btn:disabled > .arrow-icon {
+    color: #a3aeb7;
+}
+
 .btn:focus {
     border: 2px solid #4895ef;
     outline: 2px solid #f5f3f4;
@@ -26,4 +34,42 @@
 
 .arrow-right {
     right: 0px;
+}
+
+@media (max-width: 1200px) {
+    .btn {
+        height: 12rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .btn {
+        height: 10rem;
+        width: 3rem;
+    }
+}
+
+@media (max-width: 780px) {
+    .btn {
+        height: 8rem;
+        width: 2rem;
+    }
+    .btn > svg {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .btn {
+        height: 6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        height: 4rem;
+    }
+    .btn > svg {
+        font-size: 1.5rem;
+    }
 }
