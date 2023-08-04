@@ -1,18 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+    text-decoration: none;
 }
 
-body {
+html {
     width: 100%;
-    height: 100%;
 }
 
 body {
+    position: relative;
+    width: 100%;
+
+    height: max-content;
     background-color: #e3e6e6;
+}
+
+label {
+    user-select: none;
+}
+
+#root {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#nav-backdrop-root {
+    position: absolute;
+    top: 4rem;
+    overflow: hidden;
+    width: 100%;
+    height: calc(100% - 4rem);
+}
+
+#overlay-root {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
 }
