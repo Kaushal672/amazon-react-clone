@@ -1,0 +1,93 @@
+.image-container {
+    display: flex;
+    min-width: 600px;
+    min-height: 485px;
+    max-width: 800px;
+    position: sticky;
+    top: 20px;
+    z-index: 10;
+    margin-bottom: 2rem;
+}
+
+.image__previews-container {
+    display: flex;
+    height: 50vh;
+    position: relative;
+}
+.image__previews-selector {
+    display: flex;
+    flex-direction: column;
+}
+
+.img-wrapper {
+    width: 70px;
+    height: 70px;
+    box-shadow: 0 0 0 1pt #eee;
+    cursor: pointer;
+    margin: 0.5rem 0;
+}
+
+.img-wrapper img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.image__previews {
+    position: relative;
+    margin: 0 1rem;
+    padding-bottom: 1rem;
+}
+
+.image__previews img {
+    object-fit: contain;
+}
+
+.active {
+    box-shadow: 0 0 0 2pt #e77600;
+}
+
+.mesh {
+    display: none;
+}
+
+.mesh:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(#023e8a 1px, transparent 1px);
+    background-size: 3px 3px;
+    pointer-events: none;
+}
+
+.magnified-container {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    left: 100%;
+}
+
+.image__previews:hover + .magnified-container,
+.image__previews:hover .mesh {
+    display: block;
+}
+
+.magnified-container img {
+    object-fit: contain;
+}
+
+@media (max-width: 1450px) {
+    .image-container {
+        position: static;
+    }
+}
+
+@media (max-width: 1450px) {
+    .image-container {
+        display: none;
+    }
+}

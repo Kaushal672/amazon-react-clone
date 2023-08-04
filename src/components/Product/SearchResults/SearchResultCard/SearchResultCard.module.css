@@ -1,0 +1,90 @@
+.product__card-container {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    max-width: 350px;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: black;
+}
+
+.product__card-img > img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+.product__card-content {
+    width: 100%;
+}
+
+.product__card-title {
+    display: -webkit-box;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    width: 100%;
+    height: fit-content;
+    word-wrap: break-word;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0.5rem 0;
+}
+
+.product__card-rating {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    margin-right: 5px;
+    top: -2px;
+}
+
+.product__card-category {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.product__card-offer {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.product__card-price {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
+
+.product__card-original-price {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: line-through;
+    margin-right: 0.5rem;
+}
+
+.product__card-discount {
+    font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 740px) {
+    .product__card-container {
+        width: 250px;
+    }
+    .product__card-img > img {
+        width: 100%;
+        height: 150px;
+        object-fit: contain;
+    }
+}
+
+@media (max-width: 640px) {
+    .product__card-container {
+        width: 100%;
+    }
+}

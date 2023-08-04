@@ -1,0 +1,51 @@
+.tr {
+    vertical-align: baseline;
+}
+
+.td {
+    padding-right: 8px;
+    padding-bottom: 8px;
+    text-align: left;
+}
+
+.review-context {
+    vertical-align: top;
+    white-space: nowrap;
+    color: #0077b6;
+}
+
+.review-meter {
+    position: relative;
+    display: inline-block;
+    width: 180px;
+    height: 20px;
+    background-color: #f0f2f2;
+    border-radius: 4px;
+    border: 1px solid #bbbfbf;
+    overflow: hidden;
+}
+
+.review-meter::before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    background-color: orange;
+    transition: width 0.3s ease-out;
+    animation: fill 0.3s ease-out;
+}
+
+@keyframes fill {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@media (max-width: 340px) {
+    .review-meter {
+        width: 150px;
+    }
+}

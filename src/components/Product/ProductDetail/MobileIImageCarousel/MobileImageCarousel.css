@@ -1,0 +1,9 @@
+.box {
+    display: none;
+}
+
+@media (max-width: 1450px) {
+    .box {
+        display: block;
+    }
+}

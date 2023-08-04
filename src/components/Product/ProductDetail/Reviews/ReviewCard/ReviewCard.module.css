@@ -1,0 +1,73 @@
+.review__card {
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.review__card-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.review__card-user {
+    display: flex;
+    align-items: center;
+}
+
+.review__card-user > img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    user-select: none;
+    object-fit: cover;
+}
+
+.review__card-user > h4 {
+    margin-left: 10px;
+}
+
+.review__card-body {
+    margin-left: 2.5rem;
+}
+
+.review__card-body > span > div {
+    margin-top: 0;
+    height: fit-content;
+}
+
+.review__card-body > p {
+    font-size: 14px;
+    font-family: 'Poppins', 'PT Sans', sans-serif;
+}
+
+.review__card-actions {
+    cursor: pointer;
+    position: relative;
+}
+
+.dropdown {
+    position: absolute;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    right: 0.6rem;
+}
+
+.form-actions {
+    padding: 0.5rem;
+}
+
+.form-actions > button,
+.form-actions > a {
+    display: block;
+    cursor: pointer;
+    color: #6c757d;
+    font-size: 14px;
+    background-color: white;
+    border: none;
+    outline: none;
+}
+
+.form-actions > button:hover,
+.form-actions > a:hover {
+    color: red;
+}

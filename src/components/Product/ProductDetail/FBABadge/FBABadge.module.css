@@ -1,0 +1,38 @@
+.badge {
+    position: relative;
+    display: block;
+    margin-top: 0.5rem;
+    padding: 0px 10px 5px 12px;
+    background-color: #3e4650;
+    color: #fff;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    z-index: 0;
+    border-radius: 2px;
+    height: 24px;
+    width: 90px;
+    margin-bottom: 10px;
+}
+
+.badge img {
+    width: 16px;
+    height: 16px;
+    top: 5px;
+    left: -6px;
+    object-fit: contain;
+    position: relative;
+}
+
+.badge::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -4px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 12px solid #3e4650;
+    border-bottom: 12px solid #3e4650;
+    border-right: 5px solid transparent;
+}

@@ -1,0 +1,152 @@
+.form {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.form-control {
+    margin-bottom: 1rem;
+}
+
+.form-control input,
+.form-control label {
+    display: block;
+}
+
+.form-control label {
+    margin-bottom: 0.5rem;
+}
+
+.form-control input,
+.form-control textarea,
+.form-control select {
+    width: 30rem;
+    max-width: 100%;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.form-control input:focus,
+.form-control textarea:focus,
+.form-control select:focus {
+    outline: none;
+    border: none;
+    box-shadow: 0 0 0 2pt #ffa200;
+}
+
+.form-title {
+    text-align: center;
+}
+
+.invalid input,
+.invalid textarea {
+    border: 1px solid #b40e0e;
+    background-color: #fddddd;
+}
+
+.invalid input:focus,
+.invalid textarea:focus {
+    background-color: #fbe8d2;
+}
+
+.img-preview button {
+    min-width: 18% !important;
+    margin-bottom: 0 !important;
+    background-color: #e5383b !important;
+    color: white !important;
+}
+
+.img-preview button:hover {
+    background-color: #b40e0e !important;
+}
+
+.thumbnail {
+    width: 120px;
+    height: 120px;
+    display: inline-block;
+    padding: 10px;
+    margin: 10px 10px 0px 0px;
+}
+.thumbnail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    transition-duration: 0.2s;
+    transform-origin: 50% 50%;
+}
+
+.img-preview__text {
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.thumbnail > input[type='checkbox'] {
+    display: none;
+}
+
+.thumbnail label {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    border: 2px solid #ddd;
+    transition-duration: 0.2s;
+}
+
+.thumbnail label::before {
+    background-color: white;
+    color: white;
+    content: ' ';
+    display: block;
+    border-radius: 50%;
+    border: 1px solid grey;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 28px;
+    transition-duration: 0.4s;
+    transform: scale(0);
+}
+
+.thumbnail:hover > label {
+    border: 2px solid blue;
+    filter: brightness(0.8);
+}
+
+.img-checkbox:checked + label {
+    border-color: blue;
+}
+
+.img-checkbox:checked + label::before {
+    content: '✓';
+    background-color: blue;
+    transform: scale(1);
+}
+
+.error-text {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+@media (max-width: 640px) {
+    .form {
+        width: 90%;
+    }
+    .form-control input,
+    .form-control textarea,
+    .form-control select {
+        width: 100%;
+    }
+}

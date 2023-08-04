@@ -1,0 +1,30 @@
+.search__result-wrapper {
+    margin: 2rem 0;
+    padding: 0 2rem;
+}
+
+.search__result-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    margin-top: 2rem;
+}
+
+@media (max-width: 1500px) {
+    .search__result-container {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media (max-width: 1060px) {
+    .search__result-container {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .search__result-container {
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+}
