@@ -1,0 +1,73 @@
+.orders__card {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 2rem;
+    color: black;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.orders__card > h4 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1rem;
+}
+
+.orders__card-footer {
+    margin-top: 0.5rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.invoice-link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #4747c3;
+}
+
+.orders__card-total > strong {
+    vertical-align: text-top;
+}
+
+.orders__card-total > strong {
+    font-family: 'Poppins', sans-serif;
+}
+
+.order__card-id {
+    font-size: 20px;
+}
+
+.orders__card-order-date {
+    font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 1024px) {
+    .order__card-id {
+        font-size: 18px;
+    }
+    .orders__card-order-date {
+        font-size: 14px;
+    }
+    .invoice-link {
+        font-size: 14px;
+    }
+    .orders__card-total > strong {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 640px) {
+    .order__card-id {
+        font-size: 16px;
+    }
+    .orders__card-order-date {
+        font-size: 12px;
+    }
+    .invoice-link {
+        font-size: 12px;
+    }
+    .orders__card-total > strong {
+        font-size: 12px;
+    }
+}

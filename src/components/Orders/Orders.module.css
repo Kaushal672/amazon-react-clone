@@ -1,0 +1,14 @@
+.order-container {
+    margin: 2rem 1rem;
+    width: 90%;
+}
+
+.order-container > h1 {
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 900px) {
+    .order-container > h1 {
+        margin-bottom: 2rem;
+    }
+}
