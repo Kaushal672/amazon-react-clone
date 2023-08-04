@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.error-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.error-404-gif {
+    margin-top: 2rem;
+    width: 80%;
+    max-height: 400px;
+    object-fit: contain;
+}
+
+.error-title {
+    margin-top: 1rem;
+    width: 80%;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 28px;
+}
+
+@media (max-width: 1024px) {
+    .error-title {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 640px) {
+    .error-title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .error-title {
+        font-size: 16px;
+    }
+}
