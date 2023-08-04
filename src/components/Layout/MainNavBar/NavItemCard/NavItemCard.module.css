@@ -1,0 +1,115 @@
+.nav-backdrop {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.5);
+    animation: mount 0.3s linear;
+}
+
+.container {
+    position: relative;
+    right: 32%;
+    width: 250px;
+    height: 200px;
+    padding: 1rem;
+    z-index: 100;
+    background-color: white;
+    border-radius: 6px;
+    animation: mount 0.3s linear;
+}
+
+@keyframes mount {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.sign-in {
+    margin-bottom: 0.5rem;
+}
+
+.sign-in > a,
+.sign-in > form > button:nth-child(1) {
+    margin: 0rem !important;
+    width: 200px;
+}
+
+.sign-in > form > span {
+    font-size: 12px;
+}
+
+.sign-in > form > button:nth-child(3) {
+    background-color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 12px;
+    color: #0077b6;
+}
+
+.sign-in .new-user {
+    font-size: 12px;
+}
+
+.sign-in .new-user a {
+    text-decoration: none;
+    color: #0077b6;
+}
+
+.title {
+    font-size: 18px;
+    color: #0f1111;
+    margin: 0.3rem 0rem;
+    padding: 0%;
+    text-align: left;
+}
+
+.nav-items {
+    text-align: left;
+}
+
+.nav-item {
+    margin: 0.4rem 0;
+}
+
+.nav-item > a {
+    text-decoration: none;
+    color: #444;
+    font-size: 14px;
+}
+
+.nav-item > a.active {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.nav-item > a.pending {
+    color: #999;
+}
+
+.nav-item > form > button {
+    outline: none;
+    border: none;
+    background-color: white;
+    color: #444;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.pointer:after {
+    content: '';
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    right: 25%;
+    top: -18px;
+}
