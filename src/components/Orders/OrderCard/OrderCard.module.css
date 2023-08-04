@@ -71,3 +71,19 @@
         font-size: 12px;
     }
 }
+
+@media (max-width: 480px) {
+    .order__card-id {
+        font-size: 14px;
+    }
+
+    .orders__card {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .order__card-id {
+        font-size: 12px;
+    }
+}

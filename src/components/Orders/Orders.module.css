@@ -9,6 +9,22 @@
 
 @media (max-width: 900px) {
     .order-container > h1 {
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .order-container > h1 {
+        font-size: 24px;
+    }
+}
+@media (max-width: 360px) {
+    .order-container {
+        margin: 2rem 0.5rem;
+        width: 95%;
+    }
+    .order-container > h1 {
+        font-size: 20px;
     }
 }
