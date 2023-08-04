@@ -1,0 +1,152 @@
+.cart-wrapper {
+    margin: 2rem 0;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 3fr 0.8fr;
+    width: 100%;
+    height: 100%;
+}
+
+.cart {
+    background-color: white;
+    padding: 1rem 2rem;
+}
+
+.cart .header {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #ccc;
+}
+
+.cart .header h2 {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.cart .header span {
+    align-self: flex-end;
+}
+
+.total-amount-container {
+    width: 100%;
+    min-width: 250px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 150px;
+    background-color: white;
+    padding: 1rem 1rem;
+}
+
+.total-amount-container h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.total-amount-container > form {
+    width: 100%;
+}
+
+.total-amount-container > form > button {
+    width: 100%;
+}
+
+.total-amount {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.total-amount span {
+    align-self: flex-end;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.fd-cert svg {
+    margin-right: 5px;
+}
+
+.fd-cert span {
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.fd-cert span span {
+    color: red;
+}
+
+.cart-empty__container {
+    display: flex;
+    width: 100%;
+    padding-top: 2rem;
+}
+
+.cart-empty__logo {
+    max-width: 500px;
+    min-width: 250px;
+    width: 100%;
+    height: 100%;
+}
+
+.cart-empty__logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.cart-empty__content {
+    font-family: 'Poppins', sans-serif;
+}
+
+.cart-empty__content h2 {
+    font-family: inherit;
+}
+
+.cart-empty__content p {
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.cart-empty__content > a {
+    padding: 5px;
+    min-width: 100px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.cart-wrapper:has(.cart .cart-empty__container) {
+    grid-template-columns: 1fr;
+}
+
+@media (max-width: 1000px) {
+    .cart-wrapper {
+        padding: 0 2rem;
+    }
+    .cart .header h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 780px) {
+    .cart-wrapper {
+        padding: 0 1rem;
+        grid-template-columns: 1fr;
+    }
+    .cart {
+        order: 2;
+    }
+}
+
+@media (max-width: 640px) {
+    .cart-empty__container {
+        flex-direction: column;
+    }
+    .cart .header {
+        display: none;
+    }
+
+    .cart {
+        padding: 1rem;
+    }
+}
