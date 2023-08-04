@@ -1,15 +1,12 @@
 .card {
     width: 30rem;
     height: 40rem;
-    max-width: 300px;
+    max-width: 250px;
     max-height: 300px;
     display: flex;
+    margin-right: 0.5rem;
     justify-content: center;
     flex-direction: column;
-    margin: 0 0.2rem;
-    position: relative;
-    flex: 0 0 calc(100% / 5);
-    z-index: 15;
 }
 
 .product-image {
@@ -25,6 +22,7 @@
     height: 100%;
     object-fit: contain;
     padding: 1rem;
+    -webkit-user-drag: none;
     background-color: #e3e6e6;
 }
 .card div {
@@ -33,7 +31,7 @@
 
 .discount-badge {
     font-size: 12px;
-    background-color: #ef233c;
+    background-color: #e9152e;
     color: white;
     width: fit-content;
     height: fit-content;
@@ -45,15 +43,17 @@
 .offer-deal {
     font-size: 14px;
     font-weight: 700;
-    color: #ef233c;
+    color: #e9152e;
 }
 
 .product-description {
     margin-top: 0.5rem;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 14px;
     font-weight: 500;
+    line-height: 26px;
     color: #393838;
 }
 
