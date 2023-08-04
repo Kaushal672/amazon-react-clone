@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCamera } from '@fortawesome/free-solid-svg-icons';
 import useInput from '../../../hooks/use-input';
 
-import ErrorModal from '../../ErroModal/ErrorModal';
+import ErrorModal from '../../ErrorModal/ErrorModal';
 import Button from '../../Button/Button';
 import classes from './PersonalInfoForm.module.css';
 

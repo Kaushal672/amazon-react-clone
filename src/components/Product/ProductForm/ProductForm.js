@@ -5,7 +5,7 @@ import useInput from '../../../hooks/use-input';
 import { deleteImage } from '../../../utils/cloudinaryImageManager';
 import DropBox from '../../DropBox/DropBox';
 import Button from '../../Button/Button';
-import ErrorModal from '../../ErroModal/ErrorModal';
+import ErrorModal from '../../ErrorModal/ErrorModal';
 import classes from './ProductForm.module.css';
 
 const ProductForm = ({ data = {}, edit }) => {

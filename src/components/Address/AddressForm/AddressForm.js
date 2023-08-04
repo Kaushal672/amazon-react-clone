@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import useInput from '../../../hooks/use-input';
 
 import Button from '../../Button/Button';
-import ErrorModal from '../../ErroModal/ErrorModal';
+import ErrorModal from '../../ErrorModal/ErrorModal';
 import classes from './AddressForm.module.css';
 
 const AddressForm = function ({ edit }) {

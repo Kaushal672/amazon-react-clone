@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useFetcher } from 'react-router-dom';
 import useInput from '../../../hooks/use-input';
 
-import ErrorModal from '../../ErroModal/ErrorModal';
+import ErrorModal from '../../ErrorModal/ErrorModal';
 import Button from '../../Button/Button';
 import classes from './PasswordForm.module.css';
 

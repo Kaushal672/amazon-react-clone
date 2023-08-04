@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useFetcher } from 'react-router-dom';
 import useInput from '../../../hooks/use-input';
 
-import ErrorModal from '../../ErroModal/ErrorModal';
+import ErrorModal from '../../ErrorModal/ErrorModal';
 import classes from './SellerAccountForm.module.css';
 
 import Button from '../../Button/Button';

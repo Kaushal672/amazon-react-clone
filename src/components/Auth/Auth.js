@@ -12,7 +12,7 @@ import { faCamera } from '@fortawesome/free-solid-svg-icons';
 
 import Button from '../Button/Button';
 import useInput from '../../hooks/use-input';
-import ErrorModal from '../ErroModal/ErrorModal';
+import ErrorModal from '../ErrorModal/ErrorModal';
 import classes from './Auth.module.css';
 
 const DEFAULT_PROFILE_URL =
