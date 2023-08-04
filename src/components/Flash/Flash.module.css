@@ -1,0 +1,39 @@
+.flash {
+    color: black;
+    border-radius: 10px;
+    position: absolute;
+    top: 5rem;
+    right: 10px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    background-color: #fde6e6;
+    animation: fade-in 1s ease forwards;
+}
+
+.flash > p {
+    font-family: 'Poppins', 'PT Sans', sans-serif;
+    font-size: 14px;
+    margin-left: 0.5rem;
+}
+
+.close {
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+@keyframes fade-in {
+    0% {
+        transform: translateX(100%);
+    }
+    40% {
+        transform: translateX(-20%);
+    }
+    80% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-10px);
+    }
+}
