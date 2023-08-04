@@ -136,3 +136,22 @@
     background-color: #d9d8d8;
     border-color: #d9d8d8;
 }
+
+@media (max-width: 640px) {
+    .container > form {
+        margin-left: 2px;
+    }
+    #nav-search-label {
+        max-width: 80px;
+    }
+}
+
+@media (max-width: 360px) {
+    .container > form input {
+        font-size: 12px;
+    }
+
+    #nav-search-label {
+        max-width: 40px;
+    }
+}
