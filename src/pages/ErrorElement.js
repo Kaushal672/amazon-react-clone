@@ -8,7 +8,7 @@ const ErrorElement = function () {
             <Helmet>
                 <title>Error</title>
             </Helmet>
-            <Error />;
+            <Error />
         </>
     );
 };
