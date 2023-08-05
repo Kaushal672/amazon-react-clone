@@ -64,13 +64,14 @@ export const deleteImage = async (files) => {
     const formData = new FormData();
     formData.append('files', JSON.stringify(files));
     try {
-        await fetch(`http://localhost:8080/products`, {
+        const res = await fetch(`http://localhost:8080/products`, {
             method: 'DELETE',
             body: JSON.stringify(Object.fromEntries(formData)),
             headers: {
                 'Content-Type': 'application/json',
             },
         });
+        if (!res.ok) throw new Error('Something Went wrong!');
     } catch (e) {
         console.error('Could not delete image');
     }
