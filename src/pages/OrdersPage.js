@@ -3,16 +3,16 @@ import { Helmet } from 'react-helmet-async';
 
 import customFetch from '../utils/customFetch';
 import Orders from '../components/Orders/Orders';
-import BGWhite from '../components/Helper/BGWhite';
+import useBgColor from '../hooks/use-bg-color';
 
 export const OrdersPage = function () {
     const data = useLoaderData();
+    useBgColor('white', '#e3e6e6');
     return (
         <>
             <Helmet>
                 <title>Your Orders</title>
             </Helmet>
-            <BGWhite />
             <Orders orders={data.orders} />
         </>
     );

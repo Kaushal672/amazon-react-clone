@@ -3,17 +3,17 @@ import { Helmet } from 'react-helmet-async';
 
 import customFetch from '../utils/customFetch';
 import ProductDetail from '../components/Product/ProductDetail/ProductDetail';
-import BGWhite from '../components/Helper/BGWhite';
+import useBgColor from '../hooks/use-bg-color';
 
 export const ProductDetailPage = function () {
     const { product } = useRouteLoaderData('product-detail');
+    useBgColor('white', '#e3e6e6');
 
     return (
         <>
             <Helmet>
                 <title>{product.title}</title>
             </Helmet>
-            <BGWhite />
             <ProductDetail product={product} />
         </>
     );

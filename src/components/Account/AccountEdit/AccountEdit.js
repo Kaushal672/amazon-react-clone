@@ -6,22 +6,22 @@ import customFetch from '../../../utils/customFetch';
 import store, { authActions } from '../../../store';
 
 import Button from '../../Button/Button';
-import BGWhite from '../../Helper/BGWhite';
 import PasswordForm from '../PasswordForm/PasswordForm';
 import PersonalInfoForm from '../PersonalInfoForm/PersonalInfoForm';
 import classes from './AccountEdit.module.css';
+import useBgColor from '../../../hooks/use-bg-color';
 
 export const AccountEdit = () => {
     const [showPIForm, setShowPIForm] = useState(false);
     const [showPWForm, setShowPWForm] = useState(false);
     const data = useLoaderData();
+    useBgColor('white', '#e3e6e6');
 
     return (
         <>
             <Helmet>
                 <title>Amazon Login & Security</title>
             </Helmet>
-            <BGWhite />
             {!showPIForm && !showPWForm && (
                 <div className={classes['account-edit__wrapper']}>
                     <h1 className={classes['page-title']}>Login & Security</h1>

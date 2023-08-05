@@ -1,17 +1,13 @@
 import { json, useLoaderData } from 'react-router-dom';
 
-import BGWhite from '../components/Helper/BGWhite';
 import SearchResults from '../components/Product/SearchResults/SearchResults';
+import useBgColor from '../hooks/use-bg-color';
 
 export const SearchResultsPage = () => {
     const data = useLoaderData();
+    useBgColor('white', '#e3e6e6');
 
-    return (
-        <>
-            <BGWhite />
-            <SearchResults products={data.products} query={data.query} />
-        </>
-    );
+    return <SearchResults products={data.products} query={data.query} />;
 };
 
 export async function loader({ request }) {

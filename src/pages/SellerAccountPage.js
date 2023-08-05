@@ -2,11 +2,13 @@ import { json, useLoaderData, redirect } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 import customFetch from '../utils/customFetch';
-import BGWhite from '../components/Helper/BGWhite';
+
 import SellerAccount from '../components/SellerAccount/SellerAccount';
+import useBgColor from '../hooks/use-bg-color';
 
 export const SellerAccountPage = function () {
     const seller = useLoaderData();
+    useBgColor('white', '#e3e6e6');
     return (
         <>
             <Helmet>
@@ -14,7 +16,6 @@ export const SellerAccountPage = function () {
                     {seller.seller ? 'Your Seller Account' : 'Become a Seller'}
                 </title>
             </Helmet>
-            <BGWhite />
             <SellerAccount seller={seller} />
         </>
     );

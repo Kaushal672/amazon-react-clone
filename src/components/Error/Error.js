@@ -3,14 +3,15 @@ import { useRouteError, useLocation, useNavigate } from 'react-router-dom';
 
 import MainNavBar from '../Layout/MainNavBar/MainNavBar';
 import Footer from '../Layout/Footer/Footer';
-import BGWhite from '../Helper/BGWhite';
 import classes from './Error.module.css';
+import useBgColor from '../../hooks/use-bg-color';
 
 const Error = () => {
     const error = useRouteError();
     let message = 'Something went wrong!!';
     const { pathname } = useLocation();
     const navigate = useNavigate();
+    useBgColor('white', '#e3e6e6');
 
     useEffect(() => {
         if (error.status === 403 && pathname === '/orders') {
@@ -59,7 +60,6 @@ const Error = () => {
     return (
         <>
             <MainNavBar />
-            <BGWhite />
             <div className={classes['error-wrapper']}>
                 {jsx}
                 <h1 className={classes['error-title']}>{message}</h1>

@@ -4,17 +4,18 @@ import { Helmet } from 'react-helmet-async';
 import store, { addressActions } from '../store';
 import customFetch from '../utils/customFetch';
 import Address from '../components/Address/Address';
-import BGWhite from '../components/Helper/BGWhite';
+import useBgColor from '../hooks/use-bg-color';
 
 export const AddressPage = () => {
     const { address } = useLoaderData();
+    useBgColor('white', '#e3e6e6');
 
     return (
         <>
             <Helmet>
                 <title>Your Addresses</title>
             </Helmet>
-            <BGWhite />
+
             <Address address={address} />
         </>
     );
