@@ -48,7 +48,9 @@ const ProductForm = ({ data = {}, edit }) => {
         inputBlurHandler: priceBlurHandler,
         inputChangeHandler: priceChangeHandler,
     } = useInput({
-        validators: [{ name: 'isInt', options: { min: 0 } }],
+        validators: [
+            { name: 'isInt', options: { min: 0, allow_leading_zeroes: false } },
+        ],
         value: price,
     });
     const {
