@@ -30,7 +30,7 @@ const AddressForm = function ({ edit }) {
         inputBlurHandler: countryBlurHandler,
         inputChangeHandler: countryChangeHandler,
     } = useInput({
-        validators: [{ name: 'isEmpty' }],
+        validators: [{ name: 'isLength', options: { min: 1, max: 30 } }],
         value: edit ? data?.country : '',
     });
 
@@ -40,7 +40,7 @@ const AddressForm = function ({ edit }) {
         inputBlurHandler: fullNameBlurHandler,
         inputChangeHandler: fullNameChangeHandler,
     } = useInput({
-        validators: [{ name: 'isEmpty' }],
+        validators: [{ name: 'isLength', options: { min: 1, max: 30 } }],
         value: edit ? data?.fullName : '',
     });
 
@@ -70,7 +70,7 @@ const AddressForm = function ({ edit }) {
         inputBlurHandler: addressLineBlurHandler,
         inputChangeHandler: addressLineChangeHandler,
     } = useInput({
-        validators: [{ name: 'isEmpty' }],
+        validators: [{ name: 'isLength', options: { min: 1, max: 50 } }],
         value: edit ? data?.addressline : '',
     });
 
@@ -80,7 +80,7 @@ const AddressForm = function ({ edit }) {
         inputBlurHandler: cityBlurHandler,
         inputChangeHandler: cityChangeHandler,
     } = useInput({
-        validators: [{ name: 'isEmpty' }],
+        validators: [{ name: 'isLength', options: { min: 1, max: 30 } }],
         value: edit ? data?.city : '',
     });
 
@@ -90,7 +90,7 @@ const AddressForm = function ({ edit }) {
         inputBlurHandler: stateBlurHandler,
         inputChangeHandler: stateChangeHandler,
     } = useInput({
-        validators: [{ name: 'isEmpty' }],
+        validators: [{ name: 'isLength', options: { min: 1, max: 30 } }],
         value: edit ? data?.state : '',
     });
 
