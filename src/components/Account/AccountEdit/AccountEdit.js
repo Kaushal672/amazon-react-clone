@@ -119,10 +119,7 @@ export async function action({ request }) {
     } else if (intent === 'update-personal-info') {
         const config = {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(Object.fromEntries(data)),
+            body: data,
         };
 
         const response = await customFetch(
