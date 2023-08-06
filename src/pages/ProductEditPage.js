@@ -12,7 +12,7 @@ export const ProductEditPage = function () {
             <Helmet>
                 <title>Edit Product</title>
             </Helmet>
-            <ProductForm data={product} edit={true} />;
+            <ProductForm data={product} edit={true} />
         </>
     );
 };

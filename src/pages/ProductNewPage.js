@@ -8,7 +8,7 @@ export const ProductNewPage = function () {
             <Helmet>
                 <title>Add New Product</title>
             </Helmet>
-            <ProductForm edit={false} />;
+            <ProductForm edit={false} />
         </>
     );
 };
