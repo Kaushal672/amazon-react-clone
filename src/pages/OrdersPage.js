@@ -19,7 +19,9 @@ export const OrdersPage = function () {
 };
 
 export async function loader() {
-    const response = await customFetch('http://localhost:8080/products/orders');
+    const response = await customFetch(
+        `${process.env.REACT_APP_REST_API_URL}/products/orders`
+    );
 
     if (!response.ok)
         throw json(
@@ -40,7 +42,7 @@ export async function action({ request }) {
         },
     };
     const response = await customFetch(
-        'http://localhost:8080/products/orders',
+        `${process.env.REACT_APP_REST_API_URL}/products/orders`,
         config
     );
 

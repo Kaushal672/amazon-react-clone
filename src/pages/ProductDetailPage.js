@@ -21,7 +21,9 @@ export const ProductDetailPage = function () {
 
 export async function loader({ params }) {
     const { id } = params;
-    const res = await fetch(`http://localhost:8080/products/${id}`);
+    const res = await fetch(
+        `${process.env.REACT_APP_REST_API_URL}/products/${id}`
+    );
 
     if (!res.ok)
         throw json(
@@ -40,7 +42,7 @@ export async function action({ request, params }) {
         const config = { method: 'DELETE' };
 
         const response = await customFetch(
-            `http://localhost:8080/products/${id}`,
+            `${process.env.REACT_APP_REST_API_URL}/products/${id}`,
             config
         );
 
@@ -61,7 +63,7 @@ export async function action({ request, params }) {
         };
 
         const response = await customFetch(
-            `http://localhost:8080/products/${id}/reviews`,
+            `${process.env.REACT_APP_REST_API_URL}/products/${id}/reviews`,
             config
         );
 
@@ -77,9 +79,9 @@ export async function action({ request, params }) {
         const config = { method: 'DELETE' };
 
         const response = await customFetch(
-            `http://localhost:8080/products/${id}/reviews/${data.get(
-                'reviewId'
-            )}`,
+            `${
+                process.env.REACT_APP_REST_API_URL
+            }/products/${id}/reviews/${data.get('reviewId')}`,
             config
         );
 

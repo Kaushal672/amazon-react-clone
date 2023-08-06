@@ -60,7 +60,7 @@ const HomePage = function () {
 export default HomePage;
 
 async function loadProdcuts() {
-    const res = await fetch('http://localhost:8080/products');
+    const res = await fetch(`${process.env.REACT_APP_REST_API_URL}/products`);
     if (!res.ok) {
         throw json({ message: 'Could not fetch products.' }, { status: 500 });
     }

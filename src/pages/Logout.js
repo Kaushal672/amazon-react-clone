@@ -7,9 +7,12 @@ export const action = async ({ request }) => {
     const data = await request.formData();
     const returnTo = data.get('returnTo');
 
-    const res = await fetch('http://localhost:8080/auth/logout', {
-        credentials: 'include',
-    });
+    const res = await fetch(
+        `${process.env.REACT_APP_REST_API_URL}/auth/logout`,
+        {
+            credentials: 'include',
+        }
+    );
     if (!res.ok) throw json({ message: 'Could not log out!' }, { status: 500 });
     store.dispatch(authActions.logout());
     store.dispatch(addressActions.removeAddress());

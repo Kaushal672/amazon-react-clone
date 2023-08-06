@@ -24,12 +24,15 @@ export async function action({ request }) {
     const headers =
         mode === 'signup' ? {} : { 'Content-Type': 'application/json' };
 
-    const res = await fetch('http://localhost:8080/auth/' + mode, {
-        method: 'POST',
-        body,
-        headers,
-        credentials: 'include',
-    });
+    const res = await fetch(
+        `${process.env.REACT_APP_REST_API_URL}/auth/${mode}`,
+        {
+            method: 'POST',
+            body,
+            headers,
+            credentials: 'include',
+        }
+    );
 
     if (res.status === 422 || res.status === 401) return res;
 

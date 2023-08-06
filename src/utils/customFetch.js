@@ -10,15 +10,21 @@ const originalRequest = async (url, config) => {
 };
 
 const refreshToken = async () => {
-    const res = await fetch('http://localhost:8080/auth/refresh', {
-        method: 'POST',
-        credentials: 'include',
-    });
+    const res = await fetch(
+        `${process.env.REACT_APP_REST_API_URL}/auth/refresh`,
+        {
+            method: 'POST',
+            credentials: 'include',
+        }
+    );
 
     if (res.status === 401) {
-        await originalRequest('http://localhost:8080/auth/logout', {
-            credentials: 'include',
-        });
+        await originalRequest(
+            `${process.env.REACT_APP_REST_API_URL}/auth/logout`,
+            {
+                credentials: 'include',
+            }
+        );
         store.dispatch(authActions.logout());
         store.dispatch(addressActions.removeAddress());
         store.dispatch(cartActions.removeCart());

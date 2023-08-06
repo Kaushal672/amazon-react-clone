@@ -21,7 +21,8 @@ export async function action({ request, params }) {
     const data = Object.fromEntries(await request.formData());
     const method = request.method;
     const url =
-        `http://localhost:8080/products/` + (method === 'PUT' ? params.id : '');
+        `${process.env.REACT_APP_REST_API_URL}/products/` +
+        (method === 'PUT' ? params.id : '');
 
     const config = {
         method,

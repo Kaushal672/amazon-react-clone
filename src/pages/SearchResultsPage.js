@@ -14,7 +14,7 @@ export async function loader({ request }) {
     const url = new URL(request.url);
 
     const res = await fetch(
-        'http://localhost:8080/products/search?' + url.searchParams
+        `${process.env.REACT_APP_REST_API_URL}/products/search?${url.searchParams}`
     );
 
     if (!res.ok)

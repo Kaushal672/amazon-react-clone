@@ -99,7 +99,7 @@ export async function action({ request }) {
         };
 
         const response = await customFetch(
-            'http://localhost:8080/auth/change-password',
+            `${process.env.REACT_APP_REST_API_URL}/auth/change-password`,
             config
         );
 
@@ -123,7 +123,7 @@ export async function action({ request }) {
         };
 
         const response = await customFetch(
-            'http://localhost:8080/auth/personal-info',
+            `${process.env.REACT_APP_REST_API_URL}/auth/personal-info`,
             config
         );
 
@@ -142,7 +142,7 @@ export async function action({ request }) {
 
 export async function loader() {
     const response = await customFetch(
-        'http://localhost:8080/auth/personal-info'
+        `${process.env.REACT_APP_REST_API_URL}/auth/personal-info`
     );
 
     if (!response.ok)

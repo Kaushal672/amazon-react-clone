@@ -22,7 +22,9 @@ export const AddressPage = () => {
 };
 
 export async function loader() {
-    const response = await customFetch('http://localhost:8080/auth/address');
+    const response = await customFetch(
+        `${process.env.REACT_APP_REST_API_URL}/auth/address`
+    );
 
     if (!response.ok)
         throw json(
@@ -44,7 +46,7 @@ export async function action({ request, params }) {
     };
 
     const response = await customFetch(
-        'http://localhost:8080/auth/address',
+        `${process.env.REACT_APP_REST_API_URL}/auth/address`,
         config
     );
 

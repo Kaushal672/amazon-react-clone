@@ -25,7 +25,7 @@ export async function loader() {
     const config = { method: 'GET' };
 
     const response = await customFetch(
-        'http://localhost:8080/auth/company',
+        `${process.env.REACT_APP_REST_API_URL}/auth/company`,
         config
     );
 
@@ -49,7 +49,7 @@ export async function action({ request }) {
     };
 
     const response = await customFetch(
-        'http://localhost:8080/auth/company',
+        `${process.env.REACT_APP_REST_API_URL}/auth/company`,
         config
     );
 
