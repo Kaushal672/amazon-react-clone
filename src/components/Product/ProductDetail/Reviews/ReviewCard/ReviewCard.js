@@ -1,4 +1,5 @@
 import { Form, Link } from 'react-router-dom';
+import dayjs from 'dayjs';
 import useOutsideClick from '../../../../../hooks/use-outside-click';
 
 import ReviewStar from '../ReviewStar/ReviewStar';
@@ -7,6 +8,8 @@ import classes from './ReviewCard.module.css';
 const ReviewCard = ({ review, userId }) => {
     const { ref, isComponentVisible, setIsComponentVisible } =
         useOutsideClick(false);
+
+    const date = dayjs(review.createdAt).format('DD MMM YYYY');
 
     return (
         <div className={classes['review__card']}>
@@ -19,7 +22,7 @@ const ReviewCard = ({ review, userId }) => {
                     className={classes['review__card-actions']}
                     ref={ref}
                     onClick={() => setIsComponentVisible(true)}>
-                    <span>&#10247;</span>
+                    <span role='button'>&#10247;</span>
                     {isComponentVisible && (
                         <Form className={classes['dropdown']} method='DELETE'>
                             <input
@@ -46,6 +49,9 @@ const ReviewCard = ({ review, userId }) => {
                 </div>
             </div>
             <div className={classes['review__card-body']}>
+                <span className={classes['review__card-date']}>
+                    Reviewed on {date}
+                </span>
                 <ReviewStar rating={review.rating} size={15} />
                 <p>{review.body}</p>
             </div>

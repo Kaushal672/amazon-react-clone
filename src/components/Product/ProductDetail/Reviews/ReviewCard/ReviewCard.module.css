@@ -5,8 +5,8 @@
 
 .review__card-heading {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
 .review__card-user {
@@ -20,6 +20,12 @@
     border-radius: 50%;
     user-select: none;
     object-fit: cover;
+}
+
+.review__card-date {
+    color: #757575;
+    display: block;
+    margin-bottom: 5px;
 }
 
 .review__card-user > h4 {
@@ -43,6 +49,7 @@
 .review__card-actions {
     cursor: pointer;
     position: relative;
+    display: inline-block;
 }
 
 .dropdown {
@@ -58,7 +65,7 @@
 
 .form-actions > button,
 .form-actions > a {
-    display: block;
+    display: inline-block;
     cursor: pointer;
     color: #6c757d;
     font-size: 14px;
