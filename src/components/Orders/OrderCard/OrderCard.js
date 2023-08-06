@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import dayjs from 'dayjs';
 
 import OrderItem from '../OrderItem/OrderItem';
@@ -16,9 +17,12 @@ const OrderCard = ({ order }) => {
                 <span className={classes['orders__card-order-date']}>
                     Purchased on {date}
                 </span>
-                <a className={classes['invoice-link']} href={order.invoice.url}>
+                <Link
+                    className={classes['invoice-link']}
+                    to={order.invoice.url}
+                    download>
                     Download Invoice
-                </a>
+                </Link>
                 <span className={classes['orders__card-total']}>
                     <strong>Total: ₹{order.total}</strong>
                 </span>
