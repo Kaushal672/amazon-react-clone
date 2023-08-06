@@ -1,9 +1,8 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
-import dayjs from 'dayjs';
+
 import {
     persistStore,
     persistReducer,
-    createTransform,
     FLUSH,
     REHYDRATE,
     PAUSE,
@@ -15,11 +14,11 @@ import {
 import cartSlice from './cart';
 import addressSlice from './address';
 import authSlice from './auth';
-import localforage from 'localforage';
+import storage from 'redux-persist/lib/storage';
 
 const persistConfig = {
     key: 'root',
-    storage: localforage,
+    storage,
 };
 
 const reducers = combineReducers({
