@@ -1,4 +1,4 @@
-import { Form, Link, useNavigation } from 'react-router-dom';
+import { Link, useFetcher } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ReactDOM from 'react-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,7 +11,7 @@ import classes from './BuyCard.module.css';
 
 const BuyCard = ({ originalPrice, formattedPrice, id, company }) => {
     const date = new Date(Date.now() + 2 * 24 * 60 * 60 * 1000);
-    const navigation = useNavigation();
+    const { Form, state } = useFetcher();
     const options = { day: 'numeric', month: 'long', weekday: 'long' };
     const formatedDate = new Intl.DateTimeFormat(
         navigator.language,
@@ -22,7 +22,7 @@ const BuyCard = ({ originalPrice, formattedPrice, id, company }) => {
 
     return (
         <div className={classes['card-container']}>
-            {navigation.state !== 'idle' &&
+            {state !== 'idle' &&
                 ReactDOM.createPortal(
                     <WhiteBackdrop />,
                     document.getElementById('nav-backdrop-root')
