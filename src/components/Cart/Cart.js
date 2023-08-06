@@ -1,4 +1,4 @@
-import { Link, Form, useNavigation } from 'react-router-dom';
+import { Link, useFetcher } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -13,11 +13,11 @@ import WhiteBackdrop from '../Backdrop/WhiteBackdrop/WhiteBackdrop';
 import classes from './Cart.module.css';
 
 const Cart = ({ cart }) => {
-    const navigation = useNavigation();
+    const { state, Form } = useFetcher();
 
     return (
         <div className={classes['cart-wrapper']}>
-            {navigation.state !== 'idle' &&
+            {state !== 'idle' &&
                 ReactDOM.createPortal(
                     <WhiteBackdrop />,
                     document.getElementById('nav-backdrop-root')
