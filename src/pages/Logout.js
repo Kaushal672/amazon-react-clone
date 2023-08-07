@@ -1,7 +1,6 @@
 import { redirect } from 'react-router-dom';
 
-import store, { cartActions } from '../store';
-import { authActions, addressActions } from '../store';
+import store from '../store';
 import { responseErrorHandler } from '../utils/responseErrorHandler';
 
 export const action = async ({ request }) => {

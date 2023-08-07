@@ -10,15 +10,7 @@ const RootLayout = function () {
     return (
         <>
             <ScrollRestoration />
-            <div
-                style={{
-                    overflowX: 'hidden',
-                    width: '100%',
-                    height: '100%',
-                    position: 'absolute',
-                }}>
-                <Flash />
-            </div>
+            <Flash />
             <MainNavBar isNavigating={navigation.state !== 'idle'} />
             <Content>
                 <Outlet />

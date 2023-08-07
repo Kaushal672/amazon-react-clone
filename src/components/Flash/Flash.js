@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faTriangleExclamation,
@@ -29,7 +30,8 @@ const Flash = () => {
     }, []);
 
     return (
-        show && (
+        show &&
+        ReactDOM.createPortal(
             <div className={classes['flash']}>
                 <FontAwesomeIcon
                     icon={faTriangleExclamation}
@@ -43,7 +45,8 @@ const Flash = () => {
                     className={classes['close']}
                     onClick={() => setShow(false)}
                 />
-            </div>
+            </div>,
+            document.getElementById('nav-backdrop-root')
         )
     );
 };
