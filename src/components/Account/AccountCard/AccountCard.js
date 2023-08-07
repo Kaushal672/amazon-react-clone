@@ -4,10 +4,7 @@ import classes from './AccountCard.module.css';
 
 const AccountCard = ({ img, path, title, description }) => {
     return (
-        <Link
-            preventScrollReset={true}
-            to={path}
-            className={classes['account-card__container']}>
+        <Link to={path} className={classes['account-card__container']}>
             <img
                 src={img}
                 alt='account card'

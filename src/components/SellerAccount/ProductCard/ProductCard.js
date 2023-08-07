@@ -20,7 +20,7 @@ const ProductCard = ({ product }) => {
                 <img src={product.images[0].url} alt={product.title} />
             </div>
             <div className={classes['product__card-content']}>
-                <Link preventScrollReset={true} to={`/products/${product._id}`}>
+                <Link to={`/products/${product._id}`}>
                     <h4 className={classes['product__card-title']}>
                         {product.title}
                     </h4>

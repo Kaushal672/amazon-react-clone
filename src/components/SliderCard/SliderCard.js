@@ -4,10 +4,7 @@ import classes from './SliderCard.module.css';
 
 const SliderCard = function ({ card }) {
     return (
-        <Link
-            preventScrollReset={true}
-            to={`products/${card._id}`}
-            className={classes.card}>
+        <Link to={`products/${card._id}`} className={classes.card}>
             <div className={classes['product-image']}>
                 <img
                     src={card.images[0].url}

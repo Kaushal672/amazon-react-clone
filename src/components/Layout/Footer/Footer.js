@@ -30,9 +30,7 @@ const Footer = () => {
                         <li>Twitter</li>
                         <li>Instagram</li>
                         <li>
-                            <Link
-                                preventScrollReset={true}
-                                to='https://www.linkedin.com/in/kaushal-bhandary'>
+                            <Link to='https://www.linkedin.com/in/kaushal-bhandary'>
                                 Linked In
                             </Link>
                         </li>
@@ -42,11 +40,7 @@ const Footer = () => {
                     <span>Make money with us</span>
                     <ul className={classes['footer__links-list']}>
                         <li>
-                            <Link
-                                preventScrollReset={true}
-                                to='/seller-account'>
-                                Sell on Amazon
-                            </Link>
+                            <Link to='/seller-account'>Sell on Amazon</Link>
                         </li>
                         <li>Sell under Amazon Accelerator</li>
                         <li>Protect and Build Your Brand</li>
@@ -61,9 +55,7 @@ const Footer = () => {
                     <span>Let us help you</span>
                     <ul className={classes['footer__links-list']}>
                         <li>
-                            <Link preventScrollReset={true} to='/account'>
-                                Your Account
-                            </Link>
+                            <Link to='/account'>Your Account</Link>
                         </li>
                         <li>Returns Centre</li>
                         <li>100% Purchase Protection</li>

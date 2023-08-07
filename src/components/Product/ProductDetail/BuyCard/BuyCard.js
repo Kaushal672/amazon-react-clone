@@ -46,19 +46,13 @@ const BuyCard = ({ originalPrice, formattedPrice, id, company }) => {
                 <span className={classes['delivery-date']}>{formatedDate}</span>
             </span>
             {address && (
-                <Link
-                    preventScrollReset={true}
-                    to='/address'
-                    className={classes['address-link']}>
+                <Link to='/address' className={classes['address-link']}>
                     <FontAwesomeIcon icon={faLocationDot} /> Delivery to{' '}
                     {address.fullName} {address.addressline} {address.city}
                 </Link>
             )}
             {!address && (
-                <Link
-                    preventScrollReset={true}
-                    to='/address'
-                    className={classes['address-link']}>
+                <Link to='/address' className={classes['address-link']}>
                     Add address
                 </Link>
             )}

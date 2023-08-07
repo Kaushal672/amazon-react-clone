@@ -12,9 +12,7 @@ const OrderItem = ({ products }) => {
                 />
             </div>
             <div className={classes['product-content']}>
-                <Link
-                    preventScrollReset={true}
-                    to={`/products/${products.productId._id}`}>
+                <Link to={`/products/${products.productId._id}`}>
                     <h4 className={classes['product-title']}>
                         {products.productId.title}
                     </h4>

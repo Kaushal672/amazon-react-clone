@@ -33,9 +33,7 @@ const CartItem = ({ item }) => {
                 <img src={item.productId.images[0].url} alt='cart item' />
             </div>
             <div className={classes['cart-item__details']}>
-                <Link
-                    preventScrollReset={true}
-                    to={`/products/${item.productId._id}`}>
+                <Link to={`/products/${item.productId._id}`}>
                     <h3>{item.productId.title}</h3>
                 </Link>
                 <div className={classes['cart-item__mobile-price']}>
