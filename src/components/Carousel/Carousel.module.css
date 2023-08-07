@@ -71,6 +71,9 @@
     .carousel-content {
         height: 38rem;
     }
+    .overlay {
+        top: 220px;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -84,6 +87,9 @@
     .slide > img {
         object-fit: contain;
     }
+    .overlay {
+        top: 180px;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -92,6 +98,9 @@
     }
     .card-container {
         top: 180px;
+    }
+    .overlay {
+        top: 160px;
     }
 }
 
@@ -102,6 +111,10 @@
     .carousel-content {
         height: 25rem;
     }
+    .overlay {
+        height: 200px;
+        top: 120px;
+    }
 }
 
 @media (max-width: 640px) {
@@ -110,6 +123,10 @@
     }
     .carousel-content {
         height: 22rem;
+    }
+    .overlay {
+        height: 160px;
+        top: 100px;
     }
 }
 
@@ -120,10 +137,18 @@
     .carousel-content {
         height: 18rem;
     }
+    .overlay {
+        height: 120px;
+        top: 80px;
+    }
 }
 
 @media (max-width: 380px) {
     .card-container {
         top: 80px;
+    }
+    .overlay {
+        height: 90px;
+        top: 60px;
     }
 }
