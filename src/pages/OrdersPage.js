@@ -46,11 +46,7 @@ export async function action({ request }) {
         config
     );
 
-    if (!response.ok)
-        throw json(
-            { message: 'Something went wrong' },
-            { status: response.status }
-        );
+    if (!response.ok) throw response;
 
     const resData = await response.json();
 
