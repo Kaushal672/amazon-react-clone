@@ -26,7 +26,11 @@ const Button = function ({
                 </button>
             )}
             {mode === 'link' && (
-                <Link to={to} className={classes.btn} onClick={() => onClick()}>
+                <Link
+                    preventScrollReset={true}
+                    to={to}
+                    className={classes.btn}
+                    onClick={() => onClick()}>
                     {children}
                 </Link>
             )}

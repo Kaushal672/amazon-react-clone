@@ -41,7 +41,9 @@ const ReviewCard = ({ review, userId }) => {
                                     </button>
                                 )}
                                 {userId !== review.author._id && (
-                                    <Link to=''>Report abuse</Link>
+                                    <Link preventScrollReset={true} to=''>
+                                        Report abuse
+                                    </Link>
                                 )}
                             </div>
                         </Form>

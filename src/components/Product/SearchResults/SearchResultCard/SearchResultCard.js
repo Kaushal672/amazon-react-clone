@@ -6,6 +6,7 @@ import classes from './SearchResultCard.module.css';
 const SearchResultCard = ({ product }) => {
     return (
         <Link
+            preventScrollReset={true}
             to={`/products/${product._id}`}
             className={classes['product__card-container']}>
             <div className={classes['product__card-img']}>
