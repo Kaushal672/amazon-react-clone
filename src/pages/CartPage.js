@@ -1,9 +1,10 @@
-import { json, useLoaderData, redirect } from 'react-router-dom';
+import { useLoaderData, redirect } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 import store, { cartActions } from '../store';
 import customFetch from '../utils/customFetch';
 import Cart from '../components/Cart/Cart';
+import { responseErrorHandler } from '../utils/responseErrorHandler';
 
 export const CartPage = function () {
     const { cart } = useLoaderData();
@@ -22,11 +23,7 @@ export async function loader() {
         `${process.env.REACT_APP_REST_API_URL}/products/cart`
     );
 
-    if (!response.ok)
-        throw json(
-            { message: 'Could not load cart.' },
-            { status: response.status }
-        );
+    responseErrorHandler(response);
     const data = await response.json();
     store.dispatch(cartActions.setCart(data.cart.items.length));
     return data;
@@ -50,15 +47,7 @@ export async function action({ request }) {
         config
     );
 
-    if (!response.ok) {
-        const data = await response.json();
-        throw json(
-            {
-                message: data.message,
-            },
-            { status: response.status }
-        );
-    }
+    responseErrorHandler(response);
 
     return redirect('/cart');
 }

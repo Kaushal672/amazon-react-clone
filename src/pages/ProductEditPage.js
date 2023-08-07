@@ -1,8 +1,9 @@
-import { useRouteLoaderData, redirect, json } from 'react-router-dom';
+import { useRouteLoaderData, redirect } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 import customFetch from '../utils/customFetch';
 import ProductForm from '../components/Product/ProductForm/ProductForm';
+import { responseErrorHandler } from '../utils/responseErrorHandler';
 
 export const ProductEditPage = function () {
     const { product } = useRouteLoaderData('product-detail');
@@ -37,8 +38,7 @@ export async function action({ request, params }) {
 
     if (response.status === 422) return response;
 
-    if (!response.ok)
-        throw json({ message: 'Could not save products' }, { status: 500 });
+    responseErrorHandler(response);
     const resData = await response.json();
     return redirect(`/products/${resData.product._id}`);
 }

@@ -1,10 +1,11 @@
-import { json, useLoaderData, redirect } from 'react-router-dom';
+import { useLoaderData, redirect } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 import customFetch from '../utils/customFetch';
 
 import SellerAccount from '../components/SellerAccount/SellerAccount';
 import useBgColor from '../hooks/use-bg-color';
+import { responseErrorHandler } from '../utils/responseErrorHandler';
 
 export const SellerAccountPage = function () {
     const seller = useLoaderData();
@@ -29,11 +30,7 @@ export async function loader() {
         config
     );
 
-    if (!response.ok)
-        throw json(
-            { message: 'Something went wrong' },
-            { status: response.status }
-        );
+    responseErrorHandler(response);
 
     return response;
 }
@@ -54,8 +51,7 @@ export async function action({ request }) {
     );
 
     if (response.status === 422) return response;
-    if (!response.ok)
-        throw json({ message: 'Something went wrong' }, { status: 500 });
+    responseErrorHandler(response);
 
     return redirect('/seller-account');
 }

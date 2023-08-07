@@ -1,10 +1,11 @@
-import { json, redirect, useLoaderData } from 'react-router-dom';
+import { redirect, useLoaderData } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 import store, { addressActions } from '../store';
 import customFetch from '../utils/customFetch';
 import Address from '../components/Address/Address';
 import useBgColor from '../hooks/use-bg-color';
+import { responseErrorHandler } from '../utils/responseErrorHandler';
 
 export const AddressPage = () => {
     const { address } = useLoaderData();
@@ -26,11 +27,7 @@ export async function loader() {
         `${process.env.REACT_APP_REST_API_URL}/auth/address`
     );
 
-    if (!response.ok)
-        throw json(
-            { message: 'Something went wrong' },
-            { status: response.status }
-        );
+    responseErrorHandler(response);
     return response;
 }
 
@@ -51,8 +48,7 @@ export async function action({ request, params }) {
     );
 
     if (response.status === 422) return response;
-    if (!response.ok)
-        throw json({ message: 'Something went wrong' }, { status: 500 });
+    responseErrorHandler(response);
 
     if (intent === 'add-address' || intent === 'default-address') {
         const resData = await response.json();

@@ -1,7 +1,8 @@
-import { json, useLoaderData } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 
 import SearchResults from '../components/Product/SearchResults/SearchResults';
 import useBgColor from '../hooks/use-bg-color';
+import { responseErrorHandler } from '../utils/responseErrorHandler';
 
 export const SearchResultsPage = () => {
     const data = useLoaderData();
@@ -17,11 +18,7 @@ export async function loader({ request }) {
         `${process.env.REACT_APP_REST_API_URL}/products/search?${url.searchParams}`
     );
 
-    if (!res.ok)
-        throw json(
-            { message: 'Something went wrong!!' },
-            { status: res.status }
-        );
+    responseErrorHandler(res);
 
     return res;
 }

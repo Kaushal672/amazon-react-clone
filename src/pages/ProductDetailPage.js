@@ -1,9 +1,10 @@
-import { json, redirect, useRouteLoaderData } from 'react-router-dom';
+import { redirect, useRouteLoaderData } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 import customFetch from '../utils/customFetch';
 import ProductDetail from '../components/Product/ProductDetail/ProductDetail';
 import useBgColor from '../hooks/use-bg-color';
+import { responseErrorHandler } from '../utils/responseErrorHandler';
 
 export const ProductDetailPage = function () {
     const { product } = useRouteLoaderData('product-detail');
@@ -25,11 +26,7 @@ export async function loader({ params }) {
         `${process.env.REACT_APP_REST_API_URL}/products/${id}`
     );
 
-    if (!res.ok)
-        throw json(
-            { message: 'Could not fetch product.' },
-            { status: res.status }
-        );
+    responseErrorHandler(res);
     return res;
 }
 
@@ -46,11 +43,7 @@ export async function action({ request, params }) {
             config
         );
 
-        if (!response.ok)
-            throw json(
-                { message: 'Could not delete product.' },
-                { status: response.status }
-            );
+        responseErrorHandler(response);
 
         return redirect('/seller-account');
     } else if (intent === 'add-review') {
@@ -67,12 +60,7 @@ export async function action({ request, params }) {
             config
         );
 
-        if (!response.ok) {
-            throw json(
-                { message: 'Could not add review.' },
-                { status: response.status }
-            );
-        }
+        responseErrorHandler(response);
 
         return redirect('/products/' + id);
     } else if (intent === 'delete-review') {
@@ -85,11 +73,7 @@ export async function action({ request, params }) {
             config
         );
 
-        if (!response.ok)
-            throw json(
-                { message: 'Could not delete review' },
-                { status: response.status }
-            );
+        responseErrorHandler(response);
         return redirect('/products/' + id);
     }
 }

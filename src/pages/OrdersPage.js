@@ -1,9 +1,10 @@
-import { json, redirect, useLoaderData } from 'react-router-dom';
+import { redirect, useLoaderData } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 import customFetch from '../utils/customFetch';
 import Orders from '../components/Orders/Orders';
 import useBgColor from '../hooks/use-bg-color';
+import { responseErrorHandler } from '../utils/responseErrorHandler';
 
 export const OrdersPage = function () {
     const data = useLoaderData();
@@ -23,11 +24,7 @@ export async function loader() {
         `${process.env.REACT_APP_REST_API_URL}/products/orders`
     );
 
-    if (!response.ok)
-        throw json(
-            { message: 'Something went wrong' },
-            { status: response.status }
-        );
+    responseErrorHandler(response);
     return response;
 }
 
@@ -46,7 +43,7 @@ export async function action({ request }) {
         config
     );
 
-    if (!response.ok) throw response;
+    responseErrorHandler(response);
 
     const resData = await response.json();
 

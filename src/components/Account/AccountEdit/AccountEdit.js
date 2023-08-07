@@ -10,6 +10,7 @@ import PasswordForm from '../PasswordForm/PasswordForm';
 import PersonalInfoForm from '../PersonalInfoForm/PersonalInfoForm';
 import classes from './AccountEdit.module.css';
 import useBgColor from '../../../hooks/use-bg-color';
+import { responseErrorHandler } from '../../../utils/responseErrorHandler';
 
 export const AccountEdit = () => {
     const [showPIForm, setShowPIForm] = useState(false);
@@ -105,11 +106,7 @@ export async function action({ request }) {
 
         if (response.status === 422 || response.status === 403) return response;
 
-        if (!response.ok)
-            throw json(
-                { message: 'Something went wrong!!' },
-                { status: response.status }
-            );
+        responseErrorHandler(response);
 
         if (intent === 'confirm-password') {
             return json({ status: 'success' });
@@ -128,12 +125,7 @@ export async function action({ request }) {
         );
 
         if (response.status === 422) return response;
-
-        if (!response.ok)
-            throw json(
-                { message: 'Something went wrong' },
-                { status: response.status }
-            );
+        responseErrorHandler(response);
 
         store.dispatch(authActions.updateName(data.get('username')));
         return redirect('/account');
@@ -145,11 +137,7 @@ export async function loader() {
         `${process.env.REACT_APP_REST_API_URL}/auth/personal-info`
     );
 
-    if (!response.ok)
-        throw json(
-            { message: 'Something went wrong!!' },
-            { status: response.status }
-        );
+    responseErrorHandler(response);
 
     return response;
 }

@@ -3,6 +3,7 @@ import { json, redirect } from 'react-router-dom';
 import store, { addressActions, cartActions } from '../store';
 import { authActions } from '../store';
 import Auth from '../components/Auth/Auth';
+import { responseErrorHandler } from '../utils/responseErrorHandler';
 
 export const AuthenticationPage = () => {
     return <Auth />;
@@ -36,8 +37,7 @@ export async function action({ request }) {
 
     if (res.status === 422 || res.status === 401) return res;
 
-    if (!res.ok)
-        throw json({ message: 'Could not authenticate user' }, { status: 500 });
+    responseErrorHandler(res);
     const resData = await res.json();
 
     store.dispatch(
