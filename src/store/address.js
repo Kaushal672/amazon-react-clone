@@ -12,10 +12,6 @@ const addressSlice = createSlice({
         setQuickAddress(state, action) {
             state.quickAddress = action.payload;
         },
-        removeAddress(state) {
-            state.address = null;
-            state.quickAddress = null;
-        },
     },
 });
 

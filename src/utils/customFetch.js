@@ -25,9 +25,7 @@ const refreshToken = async () => {
                 credentials: 'include',
             }
         );
-        store.dispatch(authActions.logout());
-        store.dispatch(addressActions.removeAddress());
-        store.dispatch(cartActions.removeCart());
+        store.dispatch({ type: 'USER_LOGOUT' });
         throw res;
     }
 

@@ -8,9 +8,6 @@ const cartSlice = createSlice({
         setCart(state, action) {
             state.total = action.payload;
         },
-        removeCart(state) {
-            state.total = 0;
-        },
     },
 });
 

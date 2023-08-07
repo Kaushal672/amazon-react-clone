@@ -21,13 +21,6 @@ const authSlice = createSlice({
             state.username = data.username;
             state.isAuthenticated = true;
         },
-        logout(state) {
-            state.access_token = null;
-            state.userId = null;
-            state.username = null;
-            state.expiration = null;
-            state.isAuthenticated = false;
-        },
         updateToken(state, action) {
             const data = decodeToken(action.payload);
             state.access_token = action.payload;

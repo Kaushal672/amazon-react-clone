@@ -15,9 +15,7 @@ export const action = async ({ request }) => {
         }
     );
     responseErrorHandler(res);
-    store.dispatch(authActions.logout());
-    store.dispatch(addressActions.removeAddress());
-    store.dispatch(cartActions.removeCart());
+    store.dispatch({ type: 'USER_LOGOUT' });
     if (returnTo) return redirect(returnTo);
     return redirect('/');
 };
