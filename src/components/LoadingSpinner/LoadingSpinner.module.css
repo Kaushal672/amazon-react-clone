@@ -17,22 +17,14 @@
     border: 3px solid transparent;
     border-top: 3px solid #212529;
     border-radius: 50%;
-    animation: animateC 0.8s linear infinite;
+    animation: spin 0.8s linear infinite;
 }
 
-@keyframes animateC {
+@keyframes spin {
     0% {
         transform: rotate(0deg);
     }
     100% {
         transform: rotate(360deg);
-    }
-}
-@keyframes animate {
-    0% {
-        transform: rotate(45deg);
-    }
-    100% {
-        transform: rotate(405deg);
     }
 }
