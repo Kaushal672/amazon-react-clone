@@ -4,7 +4,7 @@ import classes from './SliderCard.module.css';
 
 const SliderCard = function ({ card }) {
     return (
-        <div className={classes.card}>
+        <Link to={`products/${card._id}`} className={classes.card}>
             <div className={classes['product-image']}>
                 <img
                     src={card.images[0].url}
@@ -18,10 +18,8 @@ const SliderCard = function ({ card }) {
                 </span>
                 <span className={classes['offer-deal']}>{card.offer}</span>
             </div>
-            <Link to={`products/${card._id}`} className={classes['card-link']}>
-                <h1 className={classes['product-description']}>{card.title}</h1>
-            </Link>
-        </div>
+            <h1 className={classes['product-description']}>{card.title}</h1>
+        </Link>
     );
 };
 

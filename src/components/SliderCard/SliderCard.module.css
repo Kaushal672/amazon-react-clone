@@ -1,6 +1,5 @@
 .card {
-    width: 30rem;
-    height: 40rem;
+    min-width: 250px;
     max-width: 250px;
     max-height: 300px;
     display: flex;
@@ -47,6 +46,7 @@
 }
 
 .product-description {
+    text-align: center;
     margin-top: 0.5rem;
     white-space: nowrap;
     overflow: hidden;
