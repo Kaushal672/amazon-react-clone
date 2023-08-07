@@ -8,7 +8,7 @@ import useBgColor from '../../hooks/use-bg-color';
 
 const Error = () => {
     const error = useRouteError();
-    let message = 'Something went wrong!!';
+    let message = error.data?.message || 'Something went wrong!!';
     const { pathname } = useLocation();
     const navigate = useNavigate();
     useBgColor('white', '#e3e6e6');
@@ -39,7 +39,6 @@ const Error = () => {
     );
 
     if (error.status === 500) {
-        message = error.data?.message;
         jsx = (
             <img
                 src={require('../../images/500.webp')}
