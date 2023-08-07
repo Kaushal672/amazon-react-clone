@@ -38,6 +38,7 @@ const Flash = () => {
                 />
                 <p>{message}</p>
                 <FontAwesomeIcon
+                    size='lg'
                     icon={faXmark}
                     className={classes['close']}
                     onClick={() => setShow(false)}

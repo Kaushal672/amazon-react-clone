@@ -37,3 +37,9 @@
         transform: translateX(-10px);
     }
 }
+
+@media (max-width: 640px) {
+    .flash {
+        top: 8rem;
+    }
+}
