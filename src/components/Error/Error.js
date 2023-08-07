@@ -14,7 +14,10 @@ const Error = () => {
     useBgColor('white', '#e3e6e6');
 
     useEffect(() => {
-        if (error.status === 403 && pathname === '/orders') {
+        if (
+            error.status === 403 &&
+            error.data?.message === 'No default address found!'
+        ) {
             navigate('/address', {
                 state: { flash: 'No address to deliver your order!!' },
             });
@@ -25,7 +28,7 @@ const Error = () => {
                 state: { flash: 'You are not signed in!!' },
             });
         }
-    }, [error.status, pathname, navigate]);
+    }, [error, pathname, navigate]);
 
     let jsx = (
         <img
