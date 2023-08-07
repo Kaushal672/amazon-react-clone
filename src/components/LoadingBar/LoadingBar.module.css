@@ -1,0 +1,24 @@
+.loading-bar {
+    height: 2px;
+    overflow: hidden;
+    background-color: #131921;
+}
+
+.animated-bar {
+    background-color: #f78718;
+    position: fixed;
+    bottom: 0;
+    height: 2px;
+    top: 0;
+    width: 75%;
+    animation: move 1s ease infinite;
+}
+
+@keyframes move {
+    from {
+        left: -75%;
+    }
+    to {
+        left: 100%;
+    }
+}
