@@ -1,5 +1,10 @@
+.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
 .nav {
-    position: relative;
     background-color: #131921;
     height: 4rem;
     display: flex;

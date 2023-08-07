@@ -11,10 +11,11 @@ import {
 import SearchBar from '../../SearchBar/SearchBar';
 import MobileNavBar from './MobileNavBar/MobileNavBar';
 import NavItemCard from './NavItemCard/NavItemCard';
+import LoadingBar from '../../LoadingBar/LoadingBar';
 import Modal from '../../Modal/Modal';
 import classes from './MainNavBar.module.css';
 
-const MainNavBar = () => {
+const MainNavBar = ({ isNavigating }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [showNavCard, setShowNavCard] = useState(false);
     const { address, quickAddress } = useSelector((state) => state.address);
@@ -54,109 +55,124 @@ const MainNavBar = () => {
                     title='Choose Your Location'
                 />
             )}
-            <nav className={classes.nav} id='nav-bar'>
-                <div className={classes['desktop__nav-items']}>
-                    <div className={classes.container}>
-                        <Link
-                            className={`${classes['nav-link']} ${classes['nav__logo-link']}`}
-                            to='/'>
-                            <div className={classes['nav-logo']}>
-                                <img
-                                    src={require('../../../images/amazon-logo-white.png')}
-                                    alt='amazon logo'
-                                />
-                                <span>.in</span>
-                            </div>
-                        </Link>
-                    </div>
-                    <div className={classes.container}>
-                        <div
-                            className={`${classes['nav-link']} ${classes['nav__address-link']}`}
-                            onClick={handleModalToggle}>
-                            <span>{navAddress ? 'Delivery to' : 'Hello'}</span>
-                            <div className={classes.content}>
-                                <FontAwesomeIcon
-                                    icon={faLocationDot}
-                                    size='sm'
-                                    className={classes['location-dot']}
-                                />
-                                <span
-                                    className={`${classes['content-heading']} ${classes['ellipsis']}`}>
-                                    {navAddress
-                                        ? `${navAddress.Name} ${navAddress.Pincode}`
-                                        : 'Select Your Address'}
+            <div className={classes['sticky']}>
+                {isNavigating && <LoadingBar></LoadingBar>}
+                <nav className={classes.nav} id='nav-bar'>
+                    <div className={classes['desktop__nav-items']}>
+                        <div className={classes.container}>
+                            <Link
+                                className={`${classes['nav-link']} ${classes['nav__logo-link']}`}
+                                to='/'>
+                                <div className={classes['nav-logo']}>
+                                    <img
+                                        src={require('../../../images/amazon-logo-white.png')}
+                                        alt='amazon logo'
+                                    />
+                                    <span>.in</span>
+                                </div>
+                            </Link>
+                        </div>
+                        <div className={classes.container}>
+                            <div
+                                className={`${classes['nav-link']} ${classes['nav__address-link']}`}
+                                onClick={handleModalToggle}>
+                                <span>
+                                    {navAddress ? 'Delivery to' : 'Hello'}
                                 </span>
+                                <div className={classes.content}>
+                                    <FontAwesomeIcon
+                                        icon={faLocationDot}
+                                        size='sm'
+                                        className={classes['location-dot']}
+                                    />
+                                    <span
+                                        className={`${classes['content-heading']} ${classes['ellipsis']}`}>
+                                        {navAddress
+                                            ? `${navAddress.Name} ${navAddress.Pincode}`
+                                            : 'Select Your Address'}
+                                    </span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div
-                        className={`${classes.container} ${classes['search-bar__container']}`}>
-                        <SearchBar display='desktop' />
-                    </div>
-                    <div className={`${classes.container} ${classes.account}`}>
                         <div
-                            onMouseEnter={handleMouseOver}
-                            onMouseLeave={handleMouseLeave}
-                            className={`${classes['nav-link']} ${classes['nav__account-link']}`}>
-                            <span className={classes['ellipsis']}>
-                                Hello,{' '}
-                                {`${isAuthenticated ? username : 'sign in'}`}
-                            </span>
-                            <div className={classes.content}>
-                                <span className={classes['content-heading']}>
-                                    Accounts & Lists
-                                </span>
-                                <FontAwesomeIcon
-                                    icon={faCaretDown}
-                                    size='sm'
-                                    className={classes['caret-down']}
-                                />
-                            </div>
+                            className={`${classes.container} ${classes['search-bar__container']}`}>
+                            <SearchBar display='desktop' />
                         </div>
-                        {showNavCard && (
-                            <NavItemCard
-                                isAuthenticated={isAuthenticated}
-                                handleMouseOver={handleMouseOver}
-                                handleMouseLeave={handleMouseLeave}
-                            />
-                        )}
-                    </div>
-                    <div className={`${classes.container} ${classes.orders}`}>
-                        <Link
-                            to='/orders'
-                            className={`${classes['nav-link']} ${classes['nav__orders-link']}`}>
-                            <span>Returns</span>
-                            <div className={classes.content}>
-                                <span className={classes['content-heading']}>
-                                    & Orders
+                        <div
+                            className={`${classes.container} ${classes.account}`}>
+                            <div
+                                onMouseEnter={handleMouseOver}
+                                onMouseLeave={handleMouseLeave}
+                                className={`${classes['nav-link']} ${classes['nav__account-link']}`}>
+                                <span className={classes['ellipsis']}>
+                                    Hello,{' '}
+                                    {`${
+                                        isAuthenticated ? username : 'sign in'
+                                    }`}
                                 </span>
+                                <div className={classes.content}>
+                                    <span
+                                        className={classes['content-heading']}>
+                                        Accounts & Lists
+                                    </span>
+                                    <FontAwesomeIcon
+                                        icon={faCaretDown}
+                                        size='sm'
+                                        className={classes['caret-down']}
+                                    />
+                                </div>
                             </div>
-                        </Link>
-                    </div>
-                    <div className={`${classes.container} ${classes.cart}`}>
-                        <Link
-                            to='/cart'
-                            className={`${classes['nav-link']} ${classes['nav__cart-link']}`}>
-                            <div className={classes['item-1']}>
-                                <FontAwesomeIcon
-                                    icon={faCartShopping}
-                                    size='xs'
-                                    className={classes['cart-icon']}
+                            {showNavCard && (
+                                <NavItemCard
+                                    isAuthenticated={isAuthenticated}
+                                    handleMouseOver={handleMouseOver}
+                                    handleMouseLeave={handleMouseLeave}
                                 />
-                            </div>
-                            <div className={classes['item-2']}>
-                                <span className={classes['cart-total-item']}>
-                                    {cartTotalItem > 9 ? '9+' : cartTotalItem}
-                                </span>
-                                <span className={classes['content-heading']}>
-                                    Cart
-                                </span>
-                            </div>
-                        </Link>
+                            )}
+                        </div>
+                        <div
+                            className={`${classes.container} ${classes.orders}`}>
+                            <Link
+                                to='/orders'
+                                className={`${classes['nav-link']} ${classes['nav__orders-link']}`}>
+                                <span>Returns</span>
+                                <div className={classes.content}>
+                                    <span
+                                        className={classes['content-heading']}>
+                                        & Orders
+                                    </span>
+                                </div>
+                            </Link>
+                        </div>
+                        <div className={`${classes.container} ${classes.cart}`}>
+                            <Link
+                                to='/cart'
+                                className={`${classes['nav-link']} ${classes['nav__cart-link']}`}>
+                                <div className={classes['item-1']}>
+                                    <FontAwesomeIcon
+                                        icon={faCartShopping}
+                                        size='xs'
+                                        className={classes['cart-icon']}
+                                    />
+                                </div>
+                                <div className={classes['item-2']}>
+                                    <span
+                                        className={classes['cart-total-item']}>
+                                        {cartTotalItem > 9
+                                            ? '9+'
+                                            : cartTotalItem}
+                                    </span>
+                                    <span
+                                        className={classes['content-heading']}>
+                                        Cart
+                                    </span>
+                                </div>
+                            </Link>
+                        </div>
                     </div>
-                </div>
-                <MobileNavBar isAuthenticated={isAuthenticated} />
-            </nav>
+                    <MobileNavBar isAuthenticated={isAuthenticated} />
+                </nav>
+            </div>
         </>
     );
 };

@@ -1,5 +1,10 @@
 import { useEffect } from 'react';
-import { useRouteError, useLocation, useNavigate } from 'react-router-dom';
+import {
+    useRouteError,
+    useLocation,
+    useNavigate,
+    useNavigation,
+} from 'react-router-dom';
 
 import MainNavBar from '../Layout/MainNavBar/MainNavBar';
 import Footer from '../Layout/Footer/Footer';
@@ -11,6 +16,7 @@ const Error = () => {
     let message = error.data?.message || 'Something went wrong!!';
     const { pathname } = useLocation();
     const navigate = useNavigate();
+    const navigation = useNavigation();
     useBgColor('white', '#e3e6e6');
 
     useEffect(() => {
@@ -61,7 +67,7 @@ const Error = () => {
 
     return (
         <>
-            <MainNavBar />
+            <MainNavBar isNavigating={navigation.state !== 'idle'} />
             <div className={classes['error-wrapper']}>
                 {jsx}
                 <h1 className={classes['error-title']}>{message}</h1>
