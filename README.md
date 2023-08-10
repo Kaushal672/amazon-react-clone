@@ -35,6 +35,7 @@ Login Credentials:
     -   Responsive web design.
     -   Search existing products.
     -   Show flash message when user not logged in.
+    -   Form validation.
 
 ## Built with
 
