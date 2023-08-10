@@ -108,8 +108,7 @@ const PersonalInfoForm = function ({ user, onCancel }) {
                             className={classes['image-upload']}
                             type='file'
                             name='avatar'
-                            accept='image/jpeg, image/jpg, image/png'
-                            capture
+                            accept='image/*;capture=camera'
                         />
                     </div>
                     <div className={nameClasses}>
