@@ -15,8 +15,8 @@ Login Credentials:
 
 ## Features
 
--   Authorization
-    -   User can login or signup for new account using.
+-   Authentication
+    -   User can login or signup for new account.
     -   User can upload profile image while signing up.
     -   User can update password(admin only).
     -   User can update personal information i.e. username, phone, email and profile image.
@@ -24,13 +24,13 @@ Login Credentials:
     -   User can add and delete reviews.
     -   User can view their cart and orders.
     -   User can download their order invoice.
--   Authentication
+-   Authorization
     -   User have to be logged in to review, add to cart and purchase products.
     -   User have to be logged in and registered as seller to add, edit, delete product.
     -   User cannot edit or delete products uploaded by other users.
+    -   Seller can add product images while adding and editing product.
 -   Other functionalities
     -   Payment using stripe.
-    -   Seller can add product images while adding and editing product.
     -   Show image upload progress.
     -   Responsive web design.
     -   Search existing products.
