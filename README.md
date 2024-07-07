@@ -1,6 +1,6 @@
 # Amazon-Clone with React
 
-This is a clone of popular e-commerce site Amazon using react. Checkout Backend code here. It is web application designed to add, remove, edit, add to cart, place order and review products. Checkout backend code [here](https://github.com/Kaushal672/rest-api-amazon-clone).
+This is a clone of popular e-commerce site Amazon using react. It is web application designed to add, remove, edit, add to cart, place order and review products. Checkout backend code [here](https://github.com/Kaushal672/rest-api-amazon-clone).
 
 ## Live Demo
 
